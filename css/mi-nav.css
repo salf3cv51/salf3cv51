@@ -1,8 +1,7 @@
 mi-nav {
-  
-
+  position: fixed;
   display: block;
-  background-color: green;
+  background-color: navy;
 }
 
 mi-nav ul {
@@ -10,7 +9,8 @@ mi-nav ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #333;
+  border: 1px solid #e7e7e7;
+  background-color: #f3f3f3;
 }
 
 mi-nav li {
@@ -19,16 +19,17 @@ mi-nav li {
 
 mi-nav li a {
   display: block;
-  color: white;
+  color: #666;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
 }
 
 mi-nav li a:hover:not(.active) {
-  background-color: #111;
+  background-color: #ddd;
 }
 
-mi-nav .active {
+mi-nav li a.active {
+  color: white;
   background-color: #04AA6D;
 }
