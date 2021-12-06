@@ -1,4 +1,5 @@
 mi-nav {
+  position: fixed;
   display: block;
   background-color: navy;
 }
@@ -18,7 +19,7 @@ mi-nav li {
 
 mi-nav li a {
   display: block;
-  color: #666;
+  color: black;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
