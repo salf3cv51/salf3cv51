@@ -17,6 +17,10 @@
   padding: 1rem;
 }
 
+.fila:hover:not(.active) {
+  background-color: cornflowerblue;
+}
+
 a.fila:active {
   background-color:
     var(--col-active);
