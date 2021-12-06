@@ -18,17 +18,17 @@ mi-nav li {
 
 mi-nav li a {
   display: block;
-  color: #666;
+  color: white;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
 }
 
 mi-nav li a:hover:not(.active) {
-  background-color: gray;
+  background-color: cornflowerblue;
 }
 
 mi-nav li a.active {
   color: white;
-  background-color: #04AA6D;
+  background-color:cyan;
 }
