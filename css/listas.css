@@ -19,6 +19,8 @@
 
 .fila:hover:not(.active) {
   background-color: cornflowerblue;
+  font-family: sans-serif;
+  color: white;
 }
 
 a.fila:active {
