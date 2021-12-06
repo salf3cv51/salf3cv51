@@ -55,11 +55,17 @@ class MiNav extends HTMLElement {
                 <a href="alumnos.html">Equipos</a>
               </li>
               <li>
-                <a href="usuarios.html">Usuarios</a>
+                <a href="usuarios.html">Jugadores</a>
               </li>
               <li>
-              <a href="sanciones.html">Sanciones</a>
+              <a href="delegados.html">Delegados</a>
             </li>
+            <li>
+              <a href="arbitros.html">Arbitros</a>
+            </li>
+          <li>
+            <a href="sanciones.html">Sanciones</a>
+          </li>
               <li>
                 <a href="avisos.html">Avisos</a>
               </li>`;
