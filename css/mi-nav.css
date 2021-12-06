@@ -1,11 +1,12 @@
 mi-nav { 
   display: block;
-  position: -webkit-sticky;
-  position: sticky;
+  
   background-color: navy;
 }
 
 mi-nav ul {
+  position: -webkit-sticky;
+  position: sticky;
   list-style-type: none;
   margin: 0;
   padding: 0;
