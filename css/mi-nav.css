@@ -7,6 +7,7 @@ mi-nav {
 mi-nav ul {
   position: -webkit-sticky;
   position: sticky;
+  top:0;
   list-style-type: none;
   margin: 0;
   padding: 0;
