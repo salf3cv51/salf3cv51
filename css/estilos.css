@@ -100,3 +100,15 @@ p label>* {
   background-color: black;
   color: white;
 }
+
+
+.caja{
+  width: 400px;
+  background: white;
+  padding: 30px;
+  margin: auto;
+  margin-top: 100px;
+  border-radius: 4px;
+  font-family: 'calibri';
+  box-shadow: 7px 13px 37px #000;
+}
