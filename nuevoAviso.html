@@ -5,33 +5,19 @@
   <meta name="viewport"
     content="width=device-width,
        initial-scale=1.0">
-  <title>Sesión</title>
-  <!--
-    Carga el núcleo de Firebase
-    JS SDK
-  -->
+  <title>Nuevo Aviso</title>
   <script
     src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js">
     </script>
-  <!--
-    Agrega el manejo de
-    autenticación.
-  -->
   <script
     src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js">
     </script>
-  <!--
-    Agrega el manejo de bases de
-    datos.
-  -->
   <script
     src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js">
     </script>
-  <!--
-    Configura la app usando la
-    información del sitio de
-    Firebase.
-  -->
+  <script
+    src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js">
+    </script>
   <script src="js/init.js">
   </script>
   <script type="module"
@@ -48,22 +34,48 @@
 </head>
 <body>
   <section class="caja">
- <form name="forma">
+  <form name="forma">
     <mi-nav></mi-nav>
     <header>
-      <h1>Avisos</h1>
+      <h1>Usuario Nuevo</h1>
       <div class="herramientas">
-        <a href="nuevoAviso.html">
-          Nuevo Aviso…</a>
+        <a href="avisos.html">
+          Cancelar</a>
+        <button type="submit">
+          Guardar
+        </button>
       </div>
     </header>
-
-
+    <p>
+      <label>
+        Insertar Imagen
+      </label>
+      <button class="boton button"
+          type="button"
+          name="terminarSesión">
+          Seleccionar Archivo...
+        </button>
+    </p>
+  
+    <!--
+      Maneja una asociación a
+      muchos.
+    -->
+    <fieldset>
+      <legend>Mostrar a:</legend>
+      <ul id="listaRoles"
+        class="checks">
+        <li>
+          <mi-progreso>
+          </mi-progreso>
+        </li>
+      </ul>
+    </fieldset>
     <mi-footer></mi-footer>
   </form>
 </section>
   <script type="module"
-    src="js/CtrlUsuarios.js">
+    src="js/CtrlUsuarioNuevo.js">
     </script>
 </body>
 </html>
