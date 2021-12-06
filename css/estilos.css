@@ -2,11 +2,6 @@
 @import "mi-footer.css";
 @import "listas.css";
 
-
-*{
-  background-image: linear-gradient(to bottom right, cyan, cornflowerblue);
-
-}
 :root {
   font-family: sans-serif;
   --col-active: #4646462c;
@@ -19,7 +14,8 @@ body {
   max-width: 640px;
   margin: 0 auto;
   padding: 0.5rem;
-  
+  background-image: linear-gradient(to bottom right, cyan, cornflowerblue);
+  background-repeat: no-repeat;
 }
 
 header {
@@ -103,7 +99,7 @@ p label>* {
 
 
 .caja{
-  width: 400px;
+  width: 650px;
   background: white;
   padding: 30px;
   margin: auto;
