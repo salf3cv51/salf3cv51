@@ -1,6 +1,6 @@
 mi-nav {
   position: fixed;
-  top: 0;
+  top: 10;
   display: block;
   background-color: green;
 }
