@@ -12,11 +12,11 @@ mi-nav ul {
   background-color: #f3f3f3;
 }
 
-li {
+mi-nav li {
   float: left;
 }
 
-li a {
+mi-nav li a {
   display: block;
   color: #666;
   text-align: center;
@@ -24,11 +24,11 @@ li a {
   text-decoration: none;
 }
 
-li a:hover:not(.active) {
+mi-nav li a:hover:not(.active) {
   background-color: #ddd;
 }
 
-li a.active {
+mi-nav li a.active {
   color: white;
   background-color: #04AA6D;
 }
