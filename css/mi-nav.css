@@ -1,5 +1,4 @@
-mi-nav {
-  
+mi-nav { 
   display: block;
   background-color: navy;
 }
@@ -26,7 +25,7 @@ mi-nav li a {
 }
 
 mi-nav li a:hover:not(.active) {
-  background-color: #ddd;
+  background-color: gray;
 }
 
 mi-nav li a.active {
