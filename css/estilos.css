@@ -14,9 +14,8 @@ body {
   max-width: 640px;
   margin: 0 auto;
   padding: 0.5rem;
-  background-image: linear-gradient(to bottom right, cyan, cornflowerblue);
-  background-size: auto;
-  background-repeat: no-repeat;
+  background-color: cornflowerblue;
+  
 }
 
 header {
@@ -46,7 +45,7 @@ header input {
 
 h1 {
   margin: 0.5rem 0;
-  text-shadow: -1px 0 cyan, 0 1px cyan, 1px 0 cyan, 0 -1px cyan;
+
 }
 
 figure img {
@@ -104,8 +103,8 @@ p label>* {
   background: white;
   padding: 30px;
   margin: auto;
-  margin-top: 100px;
-  border-radius: 4px;
-  font-family: 'arial';
+  margin-top: 50px;
+  border-radius: 12px;
+  font-family: 'sans-serif';
   box-shadow: 7px 13px 37px #000;
 }

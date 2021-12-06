@@ -1,5 +1,7 @@
 mi-nav { 
   display: block;
+  position: -webkit-sticky;
+  position: sticky;
   background-color: navy;
 }
 
