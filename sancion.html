@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width,
+       initial-scale=1.0">
+  <title>Sanción</title>
+  <script
+    src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js">
+    </script>
+  <script
+    src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js">
+    </script>
+  <script
+    src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js">
+    </script>
+  <script
+    src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js">
+    </script>
+  <script src="js/init.js">
+  </script>
+  <script type="module"
+    src="cmp/mi-nav.js">
+    </script>
+  <script type="module"
+    src="cmp/mi-footer.js">
+    </script>
+  <script type="module"
+    src="cmp/mi-progreso.js">
+    </script>
+  <link rel="stylesheet"
+    href="css/estilos.css">
+</head>
+<body>
+  <section class="caja">
+  <form name="forma">
+    <mi-nav></mi-nav>
+    <header>
+      <h1>
+        <output name="cue">
+         Sanción
+          <mi-progreso>
+          </mi-progreso>
+        </output>
+      </h1>
+      <div class="herramientas">
+        <a href="sanciones.html">
+          Cancelar</a>
+        <button>Guardar</button>
+        <button name="eliminar"
+          type="button">
+          Eliminar
+        </button>
+      </div>
+    </header>
+    <p>
+        <label>
+          Fecha del Incidente
+          <input name="fecha"
+            type="date" required>
+        </label>
+      </p>
+    <p>
+      <label>
+        Motivo de la sanción
+        <textarea name="motivo_sancion" required></textarea>
+      </label>
+    </p>
+    <h2>Sancion Para:</h2><br>
+    <fieldset>
+      <legend>Roles:</legend>
+      <ul id="listaRoles"
+        class="checks">
+        <li>
+          <mi-progreso>
+          </mi-progreso>
+        </li>
+      </ul>
+    </fieldset>
+    <p>
+        <label>
+          Nombre
+          <input name="nombre"
+            type="text" required>
+        </label>
+      </p>
+    <p>
+        <label>
+          Arbitro que registra
+          <select
+            name="alumnoId">
+            <option>
+              Cargando…
+            </option>
+          </select>
+        </label>
+      </p>
+    <mi-footer></mi-footer>
+  </form>
+</section>
+  <script type="module"
+    src="js/CtrlUsuario.js">
+    </script>
+</body>
+</html>
