@@ -59,15 +59,39 @@
     </figure>
     <p>
       <label>
-        Avatar
+        Fotografia
         <input name="avatar"
           type="file"
           accept=".png,.jpg,.jpeg,.gif">
       </label>
     </p>
-    <!--
-      Maneja una asociación a uno.
-    -->
+    <p>
+      <label>
+        Nombre
+        <input name="nombre"
+          type="text" required>
+      </label>
+    </p>
+    <label>
+      Fecha de Nacimiento
+      <input name="fecha"
+        type="date" required>
+    </label>
+  </p>
+    <p>
+      <label>
+        Domicilio
+        <input name="domicilio"
+          type="text" required>
+      </label>
+    </p>
+    <p>
+      <label>
+        Correo Electronico (Gmail)
+        <input name="correo"
+          type="email" required>
+      </label>
+    </p>
     <p>
       <label>
         Equipo
@@ -79,20 +103,14 @@
         </select>
       </label>
     </p>
-    <!--
-      Maneja una asociación a
-      muchos.
-    -->
-    <fieldset>
-      <legend>Roles</legend>
-      <ul id="listaRoles"
-        class="checks">
-        <li>
-          <mi-progreso>
-          </mi-progreso>
-        </li>
-      </ul>
-    </fieldset>
+    <p>
+      <label>
+        Acta de Nacimiento (Opcional)
+        <input name="acta"
+          type="file"
+          accept=".png,.jpg,.pdf">
+      </label>
+    </p>
     <mi-footer></mi-footer>
   </form>
 </section>
