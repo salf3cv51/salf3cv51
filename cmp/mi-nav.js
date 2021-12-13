@@ -45,6 +45,24 @@ class MiNav extends HTMLElement {
                   "chat.html">Chat</a>
               </li>`;
           }
+          if (roles.has("Jugador")) {
+            html += /* html */
+            `<li>
+              <a href="equiposJugador.html">Mis Equipos</a>
+            </li>`;
+          }
+          if (roles.has("Delegado")) {
+            html += /* html */
+            `<li>
+              <a href="equiposJugador.html">Mis Equipos</a>
+            </li>`;
+          }
+          if (roles.has("Arbitro")) {
+            html += /* html */
+            `<li>
+              <a href="sanciones.html">Sanciones</a>
+            </li>`;
+          }
           /* Enlaces para solo
            * administradores.
            */
