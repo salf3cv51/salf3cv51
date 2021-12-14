@@ -41,6 +41,7 @@ export function
           html += htmlAlumno(
             doc, valor));
         select.innerHTML = html;
+        console.log(html);
       },
       e => {
         muestraError(e);
