@@ -117,8 +117,7 @@ export async function
     await daoUsuario.
       doc(nombre).
       set({
-        alumnoId,
-        
+        alumnoId, 
       });
     const avatar =
       formData.get("avatar");
