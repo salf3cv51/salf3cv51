@@ -15,7 +15,7 @@ import {
 
 const daoAlumno =
   getFirestore().
-    collection("Alumno");
+    collection("Equipo");
 /** @type {HTMLFormElement} */
 const forma = document["forma"];
 getAuth().onAuthStateChanged(
@@ -37,23 +37,20 @@ async function guarda(evt) {
   try {
     evt.preventDefault();
     const formData =
-      new FormData(forma);
-    const matricula = getString(
-        formData, "matricula").trim();  
+    new FormData(forma); 
     const nombre = getString(formData, "nombre").trim();
-    const telefono = getString(formData, "telefono").trim();
-    const grupo = getString(formData, "grupo").trim();
-    const fecha = getString(formData, "fecha").trim();
+    const cat = getString(formData, "categoria").trim();
+    const del = getString(formData, "delegado").trim();
     /**
      * @type {
         import("./tipos.js").
                 Alumno} */
     const modelo = {
-      matricula,
+      
       nombre,
-      telefono,
-      grupo,
-      fecha 
+      cat,
+      del
+      
     };
     await daoAlumno.
       add(modelo);
