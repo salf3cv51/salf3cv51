@@ -36,6 +36,11 @@ header {
     var(--color-header);
 }
 
+.centrarimg{
+
+  align-content: center; 
+  text-align: center;
+}
 .herramientas {
   display: flex;
   flex-flow: wrap;
