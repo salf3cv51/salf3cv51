@@ -26,7 +26,7 @@ const params =
     searchParams;
 const id = params.get("id");
 const daoUsuario = getFirestore().
-  collection("Usuario");
+  collection("Jugador");
 /** @type {HTMLFormElement} */
 const forma = document["forma"];
 const img = document.
@@ -58,8 +58,8 @@ async function busca() {
       img.src =
         await urlStorage(id);
       selectAlumnos(
-        forma.alumnoId,
-        data.alummnoId)
+        forma.nombre,
+        data.nombre)
       checksRoles(
         listaRoles, data.rolIds);
       forma.addEventListener(

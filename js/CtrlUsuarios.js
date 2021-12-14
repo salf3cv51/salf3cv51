@@ -21,9 +21,9 @@ const firestore = getFirestore();
 const daoRol = firestore.
   collection("Rol");
 const daoAlumno = firestore.
-  collection("Alumno");
+  collection("Equipo");
 const daoUsuario = firestore.
-  collection("Usuario");
+  collection("Jugador");
 
 getAuth().onAuthStateChanged(
   protege, muestraError);
@@ -102,12 +102,12 @@ async function htmlFila(doc) {
         <span class="texto">
           <strong
               class="primario">
-            ${cod(doc.id)}
+            ${cod(doc.nombre)}
           </strong>
           <span
               class="secundario">
-            ${alumno}<br>
-            ${roles}
+            ${equipo}<br>
+            ${domicilio}
           </span>
         </span>
       </a>
