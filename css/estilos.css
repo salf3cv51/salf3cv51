@@ -21,7 +21,7 @@ body {
 .zoom{
 
   transition: 0.2s;
-  
+  transform: scale(1);
   }
 .zoom:hover{
 
