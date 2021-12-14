@@ -58,7 +58,7 @@ export function
 function
   htmlAlumno(doc, valor) {
   const selected =
-    doc.nombre === valor ?
+    doc.id === valor ?
       "selected" : "";
   /**
    * @type {import("./tipos.js").
@@ -66,9 +66,9 @@ function
   const data = doc.data();
   return (/* html */
     `<option
-        value="${cod(doc.nombre)}"
+        value="${cod(doc.id)}"
         ${selected}>
-      ${cod(data.nombre)}
+      ${cod(data.id)}
     </option>`);
 }
 
