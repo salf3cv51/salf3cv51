@@ -39,8 +39,8 @@ async function guarda(evt) {
     const formData =
     new FormData(forma); 
     const nombre = getString(formData, "nombre").trim();
-    const cat = getString(formData, "categoria").trim();
-    const del = getString(formData, "delegado").trim();
+    const categoria = getString(formData, "categoria").trim();
+    const delegado = getString(formData, "delegado").trim();
     /**
      * @type {
         import("./tipos.js").
@@ -48,8 +48,8 @@ async function guarda(evt) {
     const modelo = {
       
       nombre,
-      cat,
-      del
+      categoria,
+      delegado
       
     };
     await daoAlumno.
