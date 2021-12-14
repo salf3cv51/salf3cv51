@@ -82,9 +82,10 @@ async function htmlFila(doc) {
   const data = doc.data();
   const img = cod(
     await urlStorage(doc.id));
-  const alumno =
+  const equipo =
     await buscaAlumno(
-      data.alumnoId);
+      data.equipo);
+      
   const roles =
     await buscaRoles(data.rolIds);
   const parámetros =
@@ -135,6 +136,29 @@ async function
     }
   }
   return " ";
+}
+
+/** Recupera el html de un
+ * alumno en base a su id.
+ * @param {string} id */
+ async function
+ buscaDomicilio(id) {
+ if (id) {
+   const doc =
+     await daoAlumno.
+       doc(id).
+       get();
+   if (doc.exists) {
+     /**
+      * @type {import(
+         "./tipos.js").
+           Alumno} */
+     const data = doc.data();
+     return (/* html */
+       `${cod(data.nombre)}`);
+   }
+ }
+ return " ";
 }
 
 /** Recupera el html de los
