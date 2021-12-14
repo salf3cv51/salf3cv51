@@ -72,36 +72,7 @@ function
     </option>`);
 }
 
-/**
- * @param {HTMLElement} elemento
- * @param {string[]} valor */
-export function
-  checksRoles(elemento, valor) {
-  const set =
-    new Set(valor || []);
-  daoRol.onSnapshot(
-    snap => {
-      let html = "";
-      if (snap.size > 0) {
-        snap.forEach(doc =>
-          html +=
-          checkRol(doc, set));
-      } else {
-        html += /* html */
-          `<li class="vacio">
-              -- No hay roles
-              registrados. --
-            </li>`;
-      }
-      elemento.innerHTML = html;
-    },
-    e => {
-      muestraError(e);
-      checksRoles(
-        elemento, valor);
-    }
-  );
-}
+
 
 /**
  * @param {
@@ -133,26 +104,25 @@ export function
 /**
  * @param {Event} evt
  * @param {FormData} formData
- * @param {string} id  */
+ * @param {string} nombre  */
 export async function
   guardaUsuario(evt, formData,
-    id) {
+    nombre) {
   try {
     evt.preventDefault();
     const alumnoId =
       getForánea(formData,
-        "delegado");
-    const rolIds =
-      formData.getAll("rolIds");
+        "nombre");
+   
     await daoUsuario.
-      doc(id).
+      doc(nombre).
       set({
         alumnoId,
-        rolIds
+        
       });
     const avatar =
       formData.get("avatar");
-    await subeStorage(id, avatar);
+    await subeStorage(nombre, avatar);
     muestraUsuarios();
   } catch (e) {
     muestraError(e);

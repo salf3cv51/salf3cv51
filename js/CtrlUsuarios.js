@@ -81,7 +81,7 @@ async function htmlFila(doc) {
                       Usuario} */
   const data = doc.data();
   const img = cod(
-    await urlStorage(doc.id));
+    await urlStorage(doc.nombre));
   const equipo =
     await buscaEquipo(
       data.nombre);
@@ -129,7 +129,7 @@ async function
   if (nombre) {
     const doc =
       await daoUsuario.
-        doc(id).
+        doc(nombre).
         get();
     if (doc.exists) {
       /**
@@ -152,7 +152,7 @@ async function
  if (nombre) {
    const doc =
      await daoUsuario.
-       doc(id).
+       doc(nombre).
        get();
    if (doc.exists) {
      /**
