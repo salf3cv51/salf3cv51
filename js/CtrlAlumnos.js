@@ -70,7 +70,7 @@ function htmlFila(doc) {
   const cat = cod(data.cat);
   const del = cod(data.del);
   const nombre = cod(data.nombre);
-  var fsf= cod(data.fecha);
+ 
   
   var espacio="[   -   ]";
   

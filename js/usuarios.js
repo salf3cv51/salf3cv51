@@ -120,19 +120,11 @@ export function
   return (/* html */
     `<li>
       <label class="fila">
-        <input type="checkbox"
-            name="rolIds"
-            value="${cod(doc.id)}"
-          ${checked}>
         <span class="texto">
           <strong
               class="primario">
-            ${cod(doc.id)}
+            ${cod(doc.nombre)}
           </strong>
-          <span
-              class="secundario">
-          ${cod(data.descripción)}
-          </span>
         </span>
       </label>
     </li>`);

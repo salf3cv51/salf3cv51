@@ -92,7 +92,7 @@ async function htmlFila(doc) {
   parámetros.append("id", doc.id);
   return (/* html */
     `<li>
-      <a class="fila1 conImagen"
+      <a class="fila conImagen"
           href=
     "usuario.html?${parámetros}">
         <span class="marco">

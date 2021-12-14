@@ -146,7 +146,7 @@ function htmlFila(doc) {
    * codifican para evitar
    * inyección de código. */
   return ( /* html */
-    `<li class="fila">
+    `<li class="fila1">
       <strong class="primario">
         ${cod(data.usuarioId)}
       </strong>
