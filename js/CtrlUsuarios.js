@@ -7,7 +7,6 @@ import {
 } from "../lib/storage.js";
 import {
   cod,
-  getString,
   muestraError
 } from "../lib/util.js";
 import {
@@ -81,21 +80,17 @@ async function htmlFila(doc) {
    * @type {import("./tipos.js").
                       Usuario} */
   const data = doc.data();
-  const nombre = cod(data.nombre);
   const img = cod(
-    await urlStorage(doc.nombre));
-  const equipo =
-    await buscaEquipo(
-      data.nombre);
-      const domicilio=
-    await buscaDomicilio(
-      data.nombre);
+    await urlStorage(doc.id));
+    const equipo = cod(data.equipo);
+    const domicilio = cod(data.domicilio);
+    const nombre = cod(data.nombre);
       
   const roles =
     await buscaRoles(data.rolIds);
   const parámetros =
     new URLSearchParams();
-  parámetros.append("nombre", doc.nombre);
+  parámetros.append("id", doc.id);
   console.log(nombre);
   console.log(equipo);
   return (/* html */
@@ -110,12 +105,11 @@ async function htmlFila(doc) {
         <span class="texto">
           <strong
               class="primario">
-            ${cod(doc.nombre)}
+            ${nombre}
           </strong>
           <span
               class="secundario">
             ${equipo}<br>
-            
             ${domicilio}
           </span>
         </span>
@@ -125,13 +119,13 @@ async function htmlFila(doc) {
 
 /** Recupera el html de un
  * alumno en base a su id.
- * @param {string} nombre */
+ * @param {string} id */
 async function
-  buscaEquipo(nombre) {
-  if (nombre) {
+  buscaEquipo(id) {
+  if (id) {
     const doc =
       await daoUsuario.
-        doc(nombre).
+        doc(id).
         get();
     if (doc.exists) {
       /**
@@ -140,7 +134,7 @@ async function
             Alumno} */
       const data = doc.data();
       return (/* html */
-        `${cod(data.equipo)}`);
+        `${cod(data.nombre)}`);
     }
   }
   return " ";
@@ -148,13 +142,13 @@ async function
 
 /** Recupera el html de un
  * alumno en base a su id.
- * @param {string} nombre */
+ * @param {string} id */
  async function
- buscaDomicilio(nombre) {
- if (nombre) {
+ buscaDomicilio(id) {
+ if (id) {
    const doc =
-     await daoUsuario.
-       doc(nombre).
+     await daoAlumno.
+       doc(id).
        get();
    if (doc.exists) {
      /**
@@ -163,7 +157,7 @@ async function
            Alumno} */
      const data = doc.data();
      return (/* html */
-       `${cod(data.domicilio)}`);
+       `${cod(data.nombre)}`);
    }
  }
  return " ";
