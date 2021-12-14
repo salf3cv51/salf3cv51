@@ -83,14 +83,19 @@ async function htmlFila(doc) {
   const img = cod(
     await urlStorage(doc.id));
   const equipo =
-    await buscaAlumno(
-      data.equipo);
+    await buscaEquipo(
+      data.nombre);
+      const domicilio=
+    await buscaDomicilio(
+      data.nombre);
       
   const roles =
     await buscaRoles(data.rolIds);
   const parámetros =
     new URLSearchParams();
   parámetros.append("id", doc.id);
+  console.log(nombre);
+  console.log(equipo);
   return (/* html */
     `<li>
       <a class="fila conImagen"
@@ -108,6 +113,7 @@ async function htmlFila(doc) {
           <span
               class="secundario">
             ${equipo}<br>
+            
             ${domicilio}
           </span>
         </span>
@@ -117,12 +123,12 @@ async function htmlFila(doc) {
 
 /** Recupera el html de un
  * alumno en base a su id.
- * @param {string} id */
+ * @param {string} nombre */
 async function
-  buscaAlumno(id) {
-  if (id) {
+  buscaEquipo(nombre) {
+  if (nombre) {
     const doc =
-      await daoAlumno.
+      await daoUsuario.
         doc(id).
         get();
     if (doc.exists) {
@@ -132,7 +138,7 @@ async function
             Alumno} */
       const data = doc.data();
       return (/* html */
-        `${cod(data.nombre)}`);
+        `${cod(data.equipo)}`);
     }
   }
   return " ";
@@ -140,12 +146,12 @@ async function
 
 /** Recupera el html de un
  * alumno en base a su id.
- * @param {string} id */
+ * @param {string} nombre */
  async function
- buscaDomicilio(id) {
- if (id) {
+ buscaDomicilio(nombre) {
+ if (nombre) {
    const doc =
-     await daoAlumno.
+     await daoUsuario.
        doc(id).
        get();
    if (doc.exists) {
@@ -155,7 +161,7 @@ async function
            Alumno} */
      const data = doc.data();
      return (/* html */
-       `${cod(data.nombre)}`);
+       `${cod(data.domicilio)}`);
    }
  }
  return " ";
