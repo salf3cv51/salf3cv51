@@ -7,6 +7,7 @@ import {
 } from "../lib/storage.js";
 import {
   cod,
+  getString,
   muestraError
 } from "../lib/util.js";
 import {
@@ -80,6 +81,7 @@ async function htmlFila(doc) {
    * @type {import("./tipos.js").
                       Usuario} */
   const data = doc.data();
+  const nombre = cod(data.nombre);
   const img = cod(
     await urlStorage(doc.nombre));
   const equipo =
@@ -93,7 +95,7 @@ async function htmlFila(doc) {
     await buscaRoles(data.rolIds);
   const parámetros =
     new URLSearchParams();
-  parámetros.append("id", doc.id);
+  parámetros.append("nombre", doc.nombre);
   console.log(nombre);
   console.log(equipo);
   return (/* html */
