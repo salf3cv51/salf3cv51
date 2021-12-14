@@ -104,10 +104,10 @@ export function
 /**
  * @param {Event} evt
  * @param {FormData} formData
- * @param {string} nombre  */
+ * @param {string} id  */
 export async function
   guardaUsuario(evt, formData,
-    nombre) {
+    id) {
   try {
     evt.preventDefault();
     const alumnoId =
@@ -115,13 +115,13 @@ export async function
         "nombre");
    
     await daoUsuario.
-      doc(nombre).
+      doc(id).
       set({
         alumnoId, 
       });
     const avatar =
       formData.get("avatar");
-    await subeStorage(nombre, avatar);
+    await subeStorage(id, avatar);
     muestraUsuarios();
   } catch (e) {
     muestraError(e);

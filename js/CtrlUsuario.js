@@ -57,10 +57,9 @@ async function busca() {
       img.src =
         await urlStorage(id);
       selectAlumnos(
-        forma.nombre,
-        data.nombre)
-      checksRoles(
-        listaRoles, data.rolIds);
+        forma.id,
+        data.id)
+     
       forma.addEventListener(
         "submit", guarda);
       forma.eliminar.
