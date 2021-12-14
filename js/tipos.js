@@ -4,9 +4,37 @@
  */
 
 /**
- * @typedef {Object} Alumno
+ * @typedef {Object} Equipo
  * @property {string} nombre
- */
+ * @property {string} categoria
+   @property {string} delegado
+   */
+
+  /**
+ * @typedef {Object} Jugador
+ * @property {string} nombre
+ * @property {string} fechaNacim
+   @property {string} equipo
+   @property {string} domicilio
+   */  
+
+     /**
+ * @typedef {Object} Delegado
+ *  @property {string} rfc
+ * @property {string} nombre
+   @property {string} edad
+    @property {string} telefono
+   @property {string} domicilio
+   */  
+
+       /**
+ * @typedef {Object} Arbitro
+ *  @property {string} rfc
+ * @property {string} nombre
+   @property {string} edad
+    @property {string} telefono
+   @property {string} domicilio
+   */  
 
 /**
  * @typedef {Object} Usuario
