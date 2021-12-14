@@ -18,6 +18,16 @@ body {
   
 }
 
+.zoom{
+
+  transition: 0.2s;
+  
+  }
+.zoom:hover{
+
+transform: scale(1.5);
+
+}
 header {
   position: -webkit-sticky;
   position: sticky;
