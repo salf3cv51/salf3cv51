@@ -27,6 +27,14 @@
     @property {string} arbitro
    */  
 
+/**
+ * @typedef {Object} Aviso
+ * @property {string} titulo
+ * @property {string} fecha
+
+   */ 
+
+
      /**
  * @typedef {Object} Delegado
  *  @property {string} rfc
