@@ -82,9 +82,9 @@ import {
     const data = doc.data();
     
     const img = cod(
-      await urlStorage(data.fecha));
+      await urlStorage(data.titulo));
       const fecha = cod(data.fecha);
-      
+      const titulo = cod(data.titulo);
         
     const roles =
       await buscaRoles(data.rolIds);
@@ -94,17 +94,17 @@ import {
    
     return (/* html */
       `<li>
-        
+      <span class="texto">
+      <strong
+          class="primario">
+          ${titulo} ${fecha}
+      </strong>
+      </span>
           <span class="marco">
             <img src="${img}"
               alt="Falta el Avatar">
           </span>
-          <span class="texto">
-            <strong
-                class="primario">
-              ${fecha}
-            </strong>
-        
+         
       </li>`);
   }
   
