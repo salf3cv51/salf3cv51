@@ -53,17 +53,12 @@
         <textarea name="motivo_sancion" required></textarea>
       </label>
     </p>
-    <h2>Sancion Para:</h2><br>
-    <fieldset>
-      <legend>Roles:</legend>
-      <ul id="listaRoles"
-        class="checks">
-        <li>
-          <mi-progreso>
-          </mi-progreso>
-        </li>
-      </ul>
-    </fieldset>
+    <h2>Sancion Para(Jugador,Delegado,Equipo):</h2>
+        <input name="tipo"
+          type="text" required>
+      
+    
+ 
     <p>
         <label>
           Nombre
@@ -74,19 +69,15 @@
     <p>
         <label>
           Arbitro que registra
-          <select
-            name="alumnoId">
-            <option>
-              Cargando…
-            </option>
-          </select>
+          <input name="arbitro"
+            type="text" required>
         </label>
       </p>
     <mi-footer></mi-footer>
   </form>
 </section>
   <script type="module"
-    src="js/CtrlUsuarioNuevo.js">
+    src="js/CtrlSancionNueva.js">
     </script>
 </body>
 </html>

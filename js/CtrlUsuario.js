@@ -58,7 +58,8 @@ async function busca() {
           import("./tipos.js").
                   Jugador} */
       const data = doc.data();
-      img.src = await urlStorage(id);
+      const correo =  getString(formData, "correo").trim();
+      img.src = await urlStorage(correo);
       forma.nombre.value = data.nombre|| "";
       forma.fechaNacim.value = data.fechaNacim|| "";
       forma.equipo.value = data.equipo || "";
@@ -92,7 +93,7 @@ async function guarda(evt) {
     const fechaNacim = getString(formData, "fechaNacim").trim();
     const equipo = getString(formData, "equipo").trim();
     const domicilio = getString(formData, "domicilio").trim();
-    
+    const correo =  getString(formData, "correo").trim();
     /**
      * @type {
         import("./tipos.js").
@@ -101,7 +102,7 @@ async function guarda(evt) {
       nombre,
       fechaNacim,
       equipo,
-      domicilio
+      domicilio,correo
     };
     await daoAlumno.
       doc(id).
@@ -122,7 +123,7 @@ async function elimina() {
       await daoAlumno.
         doc(id).
         delete();
-      muestraAlumnos();
+      muestraUsuarios();
     }
   } catch (e) {
     muestraError(e);
