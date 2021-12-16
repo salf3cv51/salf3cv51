@@ -55,7 +55,7 @@ import {
       /**
        * @type {
           import("./tipos.js").
-                  Alumno} */
+                  Aviso} */
      
    const modelo = {
    
