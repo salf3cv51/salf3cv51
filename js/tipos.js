@@ -5,7 +5,7 @@
 
 /**
  * @typedef {Object} Equipo
- * @property {string} nombre
+ * @property {string} nombre_equipo
  * @property {string} categoria
    @property {string} delegado
    */

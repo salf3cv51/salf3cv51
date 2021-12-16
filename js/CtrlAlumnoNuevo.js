@@ -38,7 +38,7 @@ async function guarda(evt) {
     evt.preventDefault();
     const formData =
     new FormData(forma); 
-    const nombre = getString(formData, "nombre").trim();
+    const nombre_equipo = getString(formData, "nombre_equipo").trim();
     const categoria = getString(formData, "categoria").trim();
     const delegado = getString(formData, "delegado").trim();
     /**
@@ -47,7 +47,7 @@ async function guarda(evt) {
                 Alumno} */
     const modelo = {
       
-      nombre,
+      nombre_equipo,
       categoria,
       delegado
       

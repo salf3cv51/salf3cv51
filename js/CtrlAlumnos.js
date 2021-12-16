@@ -34,7 +34,7 @@ async function protege(usuario) {
 
 function consulta() {
   daoAlumno.
-    orderBy("nombre")
+    orderBy("nombre_equipo")
     .onSnapshot(
       htmlLista, errConsulta);
 }
@@ -69,7 +69,7 @@ function htmlFila(doc) {
   const data = doc.data();
   const categoria = cod(data.categoria);
   const delegado = cod(data.delegado);
-  const nombre = cod(data.nombre);
+  const nombre_equipo = cod(data.nombre_equipo);
  
   
   var espacio="[   -   ]";
@@ -82,7 +82,7 @@ function htmlFila(doc) {
       <a class="fila" href=
   "alumno.html?${parámetros}">
         <strong class="primario">
-          ${nombre} ${categoria} ${delegado}
+          ${nombre_equipo} ${categoria} ${delegado}
         </strong>
       </a>
      
