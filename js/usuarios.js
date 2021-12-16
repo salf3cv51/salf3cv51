@@ -152,7 +152,7 @@ export async function
         "alumnoId");
     const rolIds =
       formData.getAll("rolIds");
-    await daoUsuario.
+    await daoAlumno.
       doc(id).
       set({
         alumnoId,
