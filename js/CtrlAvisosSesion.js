@@ -94,9 +94,7 @@ import {
    
     return (/* html */
       `<li>
-        <a class="fila conImagen"
-            href=
-      "aviso.html?${parámetros}">
+        
           <span class="marco">
             <img src="${img}"
               alt="Falta el Avatar">
@@ -106,11 +104,10 @@ import {
                 class="primario">
               ${fecha}
             </strong>
-        </a>
+        
       </li>`);
   }
   
-
   
   /** Recupera el html de los
    * roles en base a sus id
