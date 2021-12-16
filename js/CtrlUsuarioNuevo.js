@@ -48,24 +48,26 @@ async function guarda(evt) {
     const fechaNacim = getString(formData, "fechaNacim").trim();
     const equipo = getString(formData, "equipo").trim();
     const domicilio = getString(formData, "domicilio").trim();
+    const correo =  getString(formData, "correo").trim();
     
     /**
      * @type {
         import("./tipos.js").
                 Alumno} */
-    const modelo = {
-      
+   
+    await daoAlumno.doc(id).set(
+
       nombre,
       fechaNacim,
       equipo,
       domicilio
-      
-    };
-    await daoAlumno.
-      add(modelo);
+
+
+    )     
       const avatar =
       formData.get("avatar");
-    await subeStorage(id, avatar);
+      document
+    await subeStorage(correo, avatar);
     muestraAlumnos();
   } catch (e) {
     muestraError(e);
