@@ -55,15 +55,13 @@ async function guarda(evt) {
         import("./tipos.js").
                 Alumno} */
    
-    await daoAlumno.doc(correo).set(
-
-      nombre,
-      fechaNacim,
-      equipo,
-      domicilio
-
-
-    )     
+ const modelo = {
+  nombre,
+  fechaNacim, equipo,domicilio,correo
+  
+                };
+                await daoAlumno.
+                  add(modelo);
       const avatar =
       formData.get("avatar");
      
