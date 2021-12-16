@@ -24,6 +24,7 @@ import {
       collection("Aviso");
   /** @type {HTMLFormElement} */
   const forma = document["forma"];
+  const id = params.get("id");
   getAuth().onAuthStateChanged(
     protege, muestraError);
   
@@ -62,7 +63,7 @@ import {
         const avatar =
         formData.get("avatar");
        
-      await subeStorage(titulo, avatar);
+      await subeStorage(id, avatar);
       muestraAvisos();
     } catch (e) {
       muestraError(e);
