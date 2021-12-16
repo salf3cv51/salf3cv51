@@ -80,8 +80,9 @@ async function htmlFila(doc) {
    * @type {import("./tipos.js").
                       Usuario} */
   const data = doc.data();
+  
   const img = cod(
-    await urlStorage(doc.id));
+    await urlStorage(data.correo));
     const equipo = cod(data.equipo);
     const domicilio = cod(data.domicilio);
     const nombre = cod(data.nombre);
