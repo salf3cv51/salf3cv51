@@ -71,7 +71,7 @@ import {
     const data = doc.data();
     
     const img = cod(
-      await urlStorage(data.titulo));
+      await urlStorage(data.id));
       const fecha = cod(data.fecha);
       const titulo = cod(data.titulo);
         
