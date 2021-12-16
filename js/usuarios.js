@@ -20,7 +20,7 @@ const firestore = getFirestore();
 const daoRol = firestore.
   collection("Rol");
 const daoAlumno = firestore.
-  collection("Alumno");
+  collection("Equipo");
 const daoUsuario = firestore.
   collection("Jugador");
 
@@ -149,7 +149,7 @@ export async function
     evt.preventDefault();
     const alumnoId =
       getForánea(formData,
-        "alumnoId");
+        "equipo");
     const rolIds =
       formData.getAll("rolIds");
     await daoUsuario.
