@@ -50,7 +50,7 @@ async function busca() {
           import("./tipos.js").
                   Alumno} */
       const data = doc.data();
-      forma.nombre.value = data.nombre_equipo || "";
+      forma.nombre.value = data.nombre || "";
       forma.categoria.value = data.categoria|| "";
       forma.delegado.value = data.delegado || "";
       
@@ -76,7 +76,7 @@ async function guarda(evt) {
     const formData =
       new FormData(forma);
     
-    const nombre = getString(formData, "nombre_equipo").trim();
+    const nombre = getString(formData, "nombre").trim();
     const categoria = getString(formData, "categoria").trim();
     const delegado = getString(formData, "delegado").trim();
     

@@ -53,7 +53,7 @@ async function busca() {
       /**
        * @type {
           import("./tipos.js").
-                  Alumno} */
+                  Jugador} */
       const data = doc.data();
       img.src = await urlStorage(id);
       forma.nombre.value = data.nombre_equipo || "";
