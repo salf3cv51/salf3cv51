@@ -28,16 +28,10 @@ import {
   getAuth().onAuthStateChanged(
     protege, muestraError);
   
-  /** @param {import(
-      "../lib/tiposFire.js").User}
-      usuario */
-  async function protege(usuario) {
-    if (tieneRol(usuario,
-      ["Administrador"])) {
-      consulta();
-    }
-  }
   
+    
+      consulta();
+    
   function consulta() {
     daoUsuario.onSnapshot(
       htmlLista, errConsulta);
