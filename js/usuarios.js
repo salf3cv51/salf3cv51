@@ -20,7 +20,7 @@ const firestore = getFirestore();
 const daoRol = firestore.
   collection("Rol");
 const daoAlumno = firestore.
-  collection("Equipo");
+  collection("Alumno");
 const daoUsuario = firestore.
   collection("Jugador");
 
@@ -41,7 +41,6 @@ export function
           html += htmlAlumno(
             doc, valor));
         select.innerHTML = html;
-        console.log(html);
       },
       e => {
         muestraError(e);
@@ -63,7 +62,7 @@ function
       "selected" : "";
   /**
    * @type {import("./tipos.js").
-                  Equipo} */
+                  Alumno} */
   const data = doc.data();
   return (/* html */
     `<option
@@ -73,7 +72,36 @@ function
     </option>`);
 }
 
-
+/**
+ * @param {HTMLElement} elemento
+ * @param {string[]} valor */
+export function
+  checksRoles(elemento, valor) {
+  const set =
+    new Set(valor || []);
+  daoRol.onSnapshot(
+    snap => {
+      let html = "";
+      if (snap.size > 0) {
+        snap.forEach(doc =>
+          html +=
+          checkRol(doc, set));
+      } else {
+        html += /* html */
+          `<li class="vacio">
+              -- No hay roles
+              registrados. --
+            </li>`;
+      }
+      elemento.innerHTML = html;
+    },
+    e => {
+      muestraError(e);
+      checksRoles(
+        elemento, valor);
+    }
+  );
+}
 
 /**
  * @param {
@@ -92,11 +120,19 @@ export function
   return (/* html */
     `<li>
       <label class="fila">
+        <input type="checkbox"
+            name="rolIds"
+            value="${cod(doc.id)}"
+          ${checked}>
         <span class="texto">
           <strong
               class="primario">
-            ${cod(doc.nombre)}
+            ${cod(doc.id)}
           </strong>
+          <span
+              class="secundario">
+          ${cod(data.descripción)}
+          </span>
         </span>
       </label>
     </li>`);
@@ -111,19 +147,16 @@ export async function
     id) {
   try {
     evt.preventDefault();
-    const nombreEquipo =
+    const alumnoId =
       getForánea(formData,
-        "nombre_equipo");
-        const fechaNacim=
-        formData.get("fecha");
-        const nombre=
-        formData.get("nombre");
-        const domicilio=
-        formData.get("domicilio");
+        "alumnoId");
+    const rolIds =
+      formData.getAll("rolIds");
     await daoUsuario.
       doc(id).
       set({
-        nombre,fechaNacim,nombreEquipo,domicilio 
+        alumnoId,
+        rolIds
       });
     const avatar =
       formData.get("avatar");
