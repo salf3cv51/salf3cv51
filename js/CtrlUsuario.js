@@ -63,7 +63,7 @@ async function busca() {
       forma.fechaNacim.value = data.fechaNacim|| "";
       forma.equipo.value = data.equipo || "";
       forma.domicilio.value = data.domicilio || "";
-      forma.corre.value = data.id || "";
+      forma.correo.value = data.id || "";
       forma.addEventListener(
         "submit", guarda);
       forma.eliminar.
