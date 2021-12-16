@@ -46,7 +46,7 @@ import {
       new FormData(forma); 
       
       const fecha = getString(formData, "fecha").trim();
-      
+      const titulo= getString(formData, "titulo").trim();
       
       /**
        * @type {
@@ -55,14 +55,14 @@ import {
      
    const modelo = {
    
-    fecha
+    fecha,titulo
                   };
                   await daoAlumno.
                     add(modelo);
         const avatar =
         formData.get("avatar");
        
-      await subeStorage(id, avatar);
+      await subeStorage(titulo, avatar);
       muestraAvisos();
     } catch (e) {
       muestraError(e);

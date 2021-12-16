@@ -82,9 +82,9 @@ import {
     const data = doc.data();
     
     const img = cod(
-      await urlStorage(data.fecha));
+      await urlStorage(data.titulo));
       const fecha = cod(data.fecha);
-      
+      const titulo = cod(data.titulo);
         
     const roles =
       await buscaRoles(data.rolIds);
@@ -104,7 +104,7 @@ import {
           <span class="texto">
             <strong
                 class="primario">
-              ${fecha}
+                ${titulo} ${fecha}
             </strong>
         </a>
       </li>`);

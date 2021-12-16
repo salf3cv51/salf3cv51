@@ -61,9 +61,9 @@ import {
         
         
          img.src = cod(
-            await urlStorage(data.fecha));
+            await urlStorage(data.titulo));
         forma.fecha.value = data.fecha|| "";
-        
+        forma.titulo.value = data.titulo|| "";
         
         forma.addEventListener(
           "submit", guarda);
@@ -89,23 +89,21 @@ import {
       
    
       const fecha = getString(formData, "fecha").trim();
- 
+      const titulo = getString(formData, "titulo").trim();
       /**
        * @type {
           import("./tipos.js").
                   Alumno} */
       const modelo = {
-        nombre,
-        fechaNacim,
-        equipo,
-        domicilio,correo
+
+        fecha,titulo
       };
       await daoAlumno.
         doc(id).
         set(modelo);
         const avatar =
       formData.get("avatar");
-      await subeStorage(fecha, avatar);
+      await subeStorage(titulo, avatar);
       muestraUsuarios();
     } catch (e) {
       muestraError(e);
