@@ -63,6 +63,7 @@ async function busca() {
       forma.fechaNacim.value = data.fechaNacim|| "";
       forma.equipo.value = data.equipo || "";
       forma.domicilio.value = data.domicilio || "";
+      forma.corre.value = data.id || "";
       forma.addEventListener(
         "submit", guarda);
       forma.eliminar.
@@ -89,6 +90,7 @@ async function guarda(evt) {
     const fechaNacim = getString(formData, "fechaNacim").trim();
     const equipo = getString(formData, "equipo").trim();
     const domicilio = getString(formData, "domicilio").trim();
+    const correo = getString(formData, "correo").trim();
     /**
      * @type {
         import("./tipos.js").
@@ -97,7 +99,7 @@ async function guarda(evt) {
       nombre,
       fechaNacim,
       equipo,
-      domicilio
+      domicilio,correo
     };
     await daoAlumno.
       doc(id).
