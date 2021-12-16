@@ -68,7 +68,7 @@ async function busca() {
       forma.domicilio.value = data.domicilio || "";
       forma.correo.value = data.correo || "";
       forma.cue.value = "Jugador: "+data.nombre || "";
-      console.log(data.id);
+      
       forma.addEventListener(
         "submit", guarda);
       forma.eliminar.
