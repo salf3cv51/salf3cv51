@@ -149,7 +149,7 @@ export async function
     evt.preventDefault();
     const alumnoId =
       getForánea(formData,
-        "equipo");
+        "alumnoId");
     const rolIds =
       formData.getAll("rolIds");
     await daoUsuario.

@@ -59,7 +59,7 @@ async function busca() {
                   Jugador} */
       const data = doc.data();
       img.src = await urlStorage(id);
-      forma.nombre.value = data.nombre_equipo || "";
+      forma.nombre.value = data.nombre|| "";
       forma.fechaNacim.value = data.fechaNacim|| "";
       forma.equipo.value = data.equipo || "";
       forma.domicilio.value = data.domicilio || "";
