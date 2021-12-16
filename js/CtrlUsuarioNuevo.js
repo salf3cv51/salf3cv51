@@ -9,7 +9,6 @@ import {
   tieneRol
 } from "./seguridad.js";
 import {
-  checksRoles,
   guardaUsuario,
   selectAlumnos
 } from "./usuarios.js";
