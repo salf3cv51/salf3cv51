@@ -55,7 +55,7 @@ async function guarda(evt) {
         import("./tipos.js").
                 Alumno} */
    
-    await daoAlumno.doc(id).set(
+    await daoAlumno.doc(correo).set(
 
       nombre,
       fechaNacim,
