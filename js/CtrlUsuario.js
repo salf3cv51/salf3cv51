@@ -61,12 +61,12 @@ async function busca() {
       const formData =
       new FormData(forma);
       const correo =  getString(formData, "correo").trim();
-      img.src = await urlStorage(correo);
+      img.src = await urlStorage(data.correo);
       forma.nombre.value = data.nombre|| "";
       forma.fechaNacim.value = data.fechaNacim|| "";
       forma.equipo.value = data.equipo || "";
       forma.domicilio.value = data.domicilio || "";
-      forma.correo.value = id || "";
+      forma.correo.value = data.correo || "";
       forma.cue.value = id || "";
       console.log(data.id);
       forma.addEventListener(
