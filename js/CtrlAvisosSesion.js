@@ -24,12 +24,7 @@ import {
     collection("Equipo");
   const daoUsuario = firestore.
     collection("Aviso");
-  
-  getAuth().onAuthStateChanged(
-    protege, muestraError);
-  
-  
-    
+ 
       consulta();
     
   function consulta() {
