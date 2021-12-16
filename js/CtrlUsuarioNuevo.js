@@ -66,7 +66,7 @@ async function guarda(evt) {
     )     
       const avatar =
       formData.get("avatar");
-      document
+     
     await subeStorage(correo, avatar);
     muestraAlumnos();
   } catch (e) {
