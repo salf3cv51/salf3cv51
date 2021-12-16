@@ -58,7 +58,7 @@ async function busca() {
           import("./tipos.js").
                   Jugador} */
       const data = doc.data();
-      const correo =  getString(formData, "correo").trim();
+      
       img.src = await urlStorage(correo);
       forma.nombre.value = data.nombre|| "";
       forma.fechaNacim.value = data.fechaNacim|| "";
