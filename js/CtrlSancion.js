@@ -48,7 +48,7 @@ import {
         /**
          * @type {
             import("./tipos.js").
-                    Alumno} */
+                    Sancion} */
         const data = doc.data();
         forma.nombre.value = data.nombre || "";
         forma.fecha.value = data.fecha|| "";
@@ -67,7 +67,7 @@ import {
       }
     } catch (e) {
       muestraError(e);
-      muestraAlumnos();
+      muestraSanciones();
     }
   }
   

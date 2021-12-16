@@ -18,6 +18,15 @@
    @property {string} domicilio
    */  
 
+ /**
+ * @typedef {Object} Sancion
+ * @property {string} nombre
+ * @property {string} fecha
+   @property {string} tipo
+   @property {string} motivo
+    @property {string} arbitro
+   */  
+
      /**
  * @typedef {Object} Delegado
  *  @property {string} rfc
