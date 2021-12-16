@@ -50,8 +50,14 @@ label.fila,
 
 .fila .texto {
   display: block;
+  
 }
 
+.fila .texto1 {
+  display: block;
+  color: red;
+  size: bold;
+}
 .fila .marco {
   display: block;
   width: 30%;

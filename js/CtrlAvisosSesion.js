@@ -65,7 +65,7 @@ import {
       html += /* html */
         `<li class="vacio">
           -- No hay avisos
-          registrados. --
+          publicados. --
         </li>`;
     }
     lista.innerHTML = html;
@@ -94,7 +94,7 @@ import {
    
     return (/* html */
       `<li>
-      <span class="texto">
+      <span class="texto1">
       <strong
           class="primario">
           ${titulo} ${fecha}
@@ -103,7 +103,7 @@ import {
           <span class="marco">
             <img src="${img}"
               alt="Falta el Avatar">
-          </span>
+          </span><br><br>
          
       </li>`);
   }

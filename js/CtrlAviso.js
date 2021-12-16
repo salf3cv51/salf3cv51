@@ -57,11 +57,8 @@ import {
          * @type {
             import("./tipos.js").
                     Jugador} */
-        const data = doc.data();
-        
-        
-         img.src = cod(
-            await urlStorage(data.titulo));
+        const data = doc.data();   
+        img.src = await urlStorage(data.titulo);
         forma.fecha.value = data.fecha|| "";
         forma.titulo.value = data.titulo|| "";
         
