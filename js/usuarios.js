@@ -32,7 +32,7 @@ export function
   selectAlumnos(select,
     valor) {
   valor = valor || "";
-  daoAlumno.
+  daoUsuario.
     orderBy("nombre").
     onSnapshot(
       snap => {
@@ -63,13 +63,13 @@ function
       "selected" : "";
   /**
    * @type {import("./tipos.js").
-                  Alumno} */
+                  Equipo} */
   const data = doc.data();
   return (/* html */
     `<option
         value="${cod(doc.id)}"
         ${selected}>
-      ${cod(data.id)}
+      ${cod(data.nombre)}
     </option>`);
 }
 
@@ -111,14 +111,19 @@ export async function
     id) {
   try {
     evt.preventDefault();
-    const alumnoId =
+    const nombreEquipo =
       getForánea(formData,
-        "nombre");
-   
+        "nombre_equipo");
+        const fechaNacim=
+        formData.get("fecha");
+        const nombre=
+        formData.get("nombre");
+        const domicilio=
+        formData.get("domicilio");
     await daoUsuario.
       doc(id).
       set({
-        alumnoId, 
+        nombre,fechaNacim,nombreEquipo,domicilio 
       });
     const avatar =
       formData.get("avatar");
