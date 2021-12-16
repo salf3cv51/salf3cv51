@@ -13,7 +13,7 @@ import {
     urlStorage
   } from "../lib/storage.js";
   import {
-    muestraAlumnos, muestraSanciones, muestraUsuarios
+    muestraAlumnos, muestraAvisos, muestraSanciones, muestraUsuarios
   } from "./navegacion.js";
   import {
     tieneRol
@@ -59,11 +59,11 @@ import {
                     Jugador} */
         const data = doc.data();
         
-        img.src = await urlStorage(id);
+        img.src = await urlStorage(data.fecha);
        
         forma.fecha.value = data.fecha|| "";
         
-        console.log(data.id);
+        
         forma.addEventListener(
           "submit", guarda);
         forma.eliminar.
@@ -75,7 +75,7 @@ import {
       }
     } catch (e) {
       muestraError(e);
-      muestraUsuarios();
+      muestraAvisos();
     }
   }
   
@@ -104,7 +104,7 @@ import {
         set(modelo);
         const avatar =
       formData.get("avatar");
-      await subeStorage(id, avatar);
+      await subeStorage(fecha, avatar);
       muestraUsuarios();
     } catch (e) {
       muestraError(e);
