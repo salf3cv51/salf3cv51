@@ -24,6 +24,9 @@ import {
       collection("Aviso");
   /** @type {HTMLFormElement} */
   const forma = document["forma"];
+  const params =
+  new URL(location.href).
+    searchParams;
   const id = params.get("id");
   getAuth().onAuthStateChanged(
     protege, muestraError);

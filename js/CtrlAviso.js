@@ -58,7 +58,7 @@ import {
             import("./tipos.js").
                     Aviso} */
         const data = doc.data();   
-        console.log(data.titulo.toString);
+        
         img.src = await urlStorage(data.id);
         
         forma.fecha.value = data.fecha|| "";
