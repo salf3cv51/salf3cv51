@@ -22,7 +22,7 @@ const daoRol = firestore.
 const daoAlumno = firestore.
   collection("Equipo");
 const daoUsuario = firestore.
-  collection("Usuario");
+  collection("Jugador");
 
 /**
  * @param {
@@ -32,7 +32,7 @@ export function
   selectAlumnos(select,
     valor) {
   valor = valor || "";
-  daoUsuario.
+  daoAlumno.
     orderBy("nombre").
     onSnapshot(
       snap => {
