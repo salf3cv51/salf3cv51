@@ -59,8 +59,9 @@ import {
                     Jugador} */
         const data = doc.data();
         
-        img.src = await urlStorage(data.fecha);
-       
+        
+         img.src = cod(
+            await urlStorage(data.fecha));
         forma.fecha.value = data.fecha|| "";
         
         

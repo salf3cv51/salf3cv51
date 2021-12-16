@@ -62,7 +62,7 @@ import {
         const avatar =
         formData.get("avatar");
        
-      await subeStorage(fecha, avatar);
+      await subeStorage(id, avatar);
       muestraAvisos();
     } catch (e) {
       muestraError(e);
