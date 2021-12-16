@@ -7,7 +7,10 @@ import {
   muestraError
 } from "../lib/util.js";
 import {
-  muestraAlumnos
+  subeStorage
+} from "../lib/storage.js";
+import {
+  muestraAlumnos, muestraUsuarios
 } from "./navegacion.js";
 import {
   tieneRol
@@ -19,6 +22,8 @@ const daoAlumno =
 const params =
   new URL(location.href).
     searchParams;
+    const img = document.
+  querySelector("img");
 const id = params.get("id");
 /** @type {HTMLFormElement} */
 const forma = document["forma"];
@@ -50,6 +55,7 @@ async function busca() {
           import("./tipos.js").
                   Alumno} */
       const data = doc.data();
+      img.src = await urlStorage(id);
       forma.nombre.value = data.nombre_equipo || "";
       forma.fechaNacim.value = data.fechaNacim|| "";
       forma.equipo.value = data.equipo || "";
@@ -65,7 +71,7 @@ async function busca() {
     }
   } catch (e) {
     muestraError(e);
-    muestraAlumnos();
+    muestraUsuarios();
   }
 }
 
