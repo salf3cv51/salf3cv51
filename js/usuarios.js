@@ -2,7 +2,7 @@ import {
   getFirestore
 } from "../lib/fabrica.js";
 import {
-  subeStorage,get
+  subeStorage
 } from "../lib/storage.js";
 import {
   cod, getForánea, muestraError
