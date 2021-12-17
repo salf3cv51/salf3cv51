@@ -114,7 +114,7 @@ import {
         const avatar =
       formData.get("avatar");
       await subeStorage(id, avatar);
-      muestraUsuarios();
+      muestraDelegados();
     } catch (e) {
       muestraError(e);
     }

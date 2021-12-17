@@ -118,51 +118,7 @@ import {
       </li>`);
   }
   
-  /** Recupera el html de un
-   * alumno en base a su id.
-   * @param {string} id */
-  async function
-    buscaEquipo(id) {
-    if (id) {
-      const doc =
-        await daoUsuario.
-          doc(id).
-          get();
-      if (doc.exists) {
-        /**
-         * @type {import(
-            "./tipos.js").
-              Alumno} */
-        const data = doc.data();
-        return (/* html */
-          `${cod(data.nombre)}`);
-      }
-    }
-    return " ";
-  }
-  
-  /** Recupera el html de un
-   * alumno en base a su id.
-   * @param {string} id */
-   async function
-   buscaDomicilio(id) {
-   if (id) {
-     const doc =
-       await daoAlumno.
-         doc(id).
-         get();
-     if (doc.exists) {
-       /**
-        * @type {import(
-           "./tipos.js").
-             Alumno} */
-       const data = doc.data();
-       return (/* html */
-         `${cod(data.nombre)}`);
-     }
-   }
-   return " ";
-  }
+
   
   /** Recupera el html de los
    * roles en base a sus id

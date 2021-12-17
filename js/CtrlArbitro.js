@@ -56,7 +56,7 @@ import {
         /**
          * @type {
             import("./tipos.js").
-                    Delegado} */
+                    Arbitro} */
         const data = doc.data();
         const formData =
         new FormData(forma);
@@ -81,7 +81,7 @@ import {
       }
     } catch (e) {
       muestraError(e);
-      muestraUsuarios();
+      muestraArbitros();
     }
   }
   
