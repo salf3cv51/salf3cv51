@@ -87,8 +87,7 @@ import {
       const domicilio = cod(data.domicilio);
       const nombre = cod(data.nombre);
         
-    const roles =
-      await buscaRoles(data.rolIds);
+   
     const parámetros =
       new URLSearchParams();
     parámetros.append("id", doc.id);
