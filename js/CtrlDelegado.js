@@ -13,7 +13,7 @@ import {
     urlStorage
   } from "../lib/storage.js";
   import {
-    muestraAlumnos, muestraUsuarios
+    muestraAlumnos, muestraDelegados, muestraUsuarios
   } from "./navegacion.js";
   import {
     tieneRol
@@ -127,7 +127,7 @@ import {
         await daoAlumno.
           doc(id).
           delete();
-        muestraUsuarios();
+        muestraDelegados();
       }
     } catch (e) {
       muestraError(e);

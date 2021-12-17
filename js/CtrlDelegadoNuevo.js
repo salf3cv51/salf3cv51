@@ -12,7 +12,7 @@ import {
   } from "../lib/storage.js";
   
   import {
-    muestraAlumnos, muestraUsuarios
+    muestraAlumnos, muestraDelegados, muestraUsuarios
   } from "./navegacion.js";
   
   import {
@@ -67,7 +67,7 @@ import {
         formData.get("avatar");
        
       await subeStorage(correo, avatar);
-      muestraUsuarios();
+      muestraDelegados();
     } catch (e) {
       muestraError(e);
     }
