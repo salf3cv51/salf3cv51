@@ -22,6 +22,9 @@ import {
 const daoAlumno =
   getFirestore().
     collection("Jugador");
+    const daoUsuario =
+  getFirestore().
+    collection("Usuario");
 const params =
   new URL(location.href).
     searchParams;
@@ -125,6 +128,8 @@ async function elimina() {
       await daoAlumno.
         doc(id).
         delete();
+        await daoUsuario.
+        doc(id).delete();
         await eliminaStorage(id);
       muestraUsuarios();
     }
