@@ -59,7 +59,7 @@ import {
             import("./tipos.js").
                     Aviso} */
         const data = doc.data();   
-        console.log(id);
+        
         img.src = await urlStorage(data.titulo);
         
         forma.fecha.value = data.fecha|| "";
