@@ -118,6 +118,7 @@ import {
           doc(id).
           delete();
           const titulo=params.get("titulo");
+          console.log(titulo);
           await eliminaStorage(titulo);
         muestraAvisos();
       }
