@@ -28,7 +28,3 @@ export function
   location.href = "delegados.html";
 }
 
-export function
-  muestraAdmins() {
-  location.href = "admins.html";
-}

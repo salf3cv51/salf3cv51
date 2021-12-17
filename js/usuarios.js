@@ -10,7 +10,7 @@ import {
 import {
   muestraArbitros,
   muestraDelegados,
-  muestraUsuarios,muestraAdmins
+  muestraUsuarios
 } from "./navegacion.js";
 
 const SIN_ALUMNOS = /* html */
@@ -221,29 +221,5 @@ export async function
  }
 }
 
-/**
- * @param {Event} evt
- * @param {FormData} formData
- * @param {string} id  */
- export async function
- guardaAdmin(id, formData,
-   ) {
- try {
-   
-   const rolIds =["Administrador","Cliente"];
 
-   await daoUsuario.
-     doc(id).
-     set({
-     
-       rolIds
-     });
-     const avatar =
-     formData.get("avatar");
-   await subeStorage(id, avatar);
-   muestraAdmins();
- } catch (e) {
-   muestraError(e);
- }
-}
 
