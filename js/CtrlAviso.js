@@ -121,6 +121,10 @@ import {
           await daoAlumno.
             doc(id).
             get();
+             /**
+         * @type {
+            import("./tipos.js").
+                    Aviso} */
           const data = doc.data(); 
           const titulo = data.titulo;
           console.log(titulo);
