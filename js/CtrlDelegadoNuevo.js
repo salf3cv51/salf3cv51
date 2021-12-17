@@ -62,8 +62,9 @@ import { guardaDelegado } from "./usuarios.js";
     rfc, edad,domicilio,correo,telefono
     
                   };
-                  await daoAlumno.
-                    add(modelo);
+                  await daoAlumno.doc(correo).set(
+                    modelo
+                  );
         const avatar =
         formData.get("avatar");
        

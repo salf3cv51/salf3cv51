@@ -7,7 +7,7 @@ import {
     muestraError
   } from "../lib/util.js";
   import {
-    subeStorage
+    subeStorage,eliminaStorage
   } from "../lib/storage.js";
   import {
     urlStorage
