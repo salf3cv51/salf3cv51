@@ -127,6 +127,8 @@ import {
                     Aviso} */
           const data = doc.data(); 
           console.log(doc.data);
+          const formData =
+        new FormData(forma);
           const titulo = getString(formData, "titulo").trim();
           console.log(titulo);
           await eliminaStorage(titulo);
