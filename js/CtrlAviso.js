@@ -126,7 +126,7 @@ import {
             import("./tipos.js").
                     Aviso} */
           const data = doc.data(); 
-          const titulo = data.titulo;
+          titulo = data.titulo;
           console.log(titulo);
           await eliminaStorage(titulo);
         muestraAvisos();
