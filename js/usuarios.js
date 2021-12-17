@@ -2,7 +2,7 @@ import {
   getFirestore
 } from "../lib/fabrica.js";
 import {
-  subeStorage
+  subeStorage,get
 } from "../lib/storage.js";
 import {
   cod, getForánea, muestraError
@@ -149,7 +149,8 @@ export async function
   guardaJugador(id, formData,
     ) {
   try {
-      
+    const formData =
+    new FormData(formData); 
     const rolIds =["Jugador","Cliente"];
 
     await daoUsuario.
@@ -158,7 +159,7 @@ export async function
       
         rolIds
       });
-    const avatar =
+      const avatar =
       formData.get("avatar");
     await subeStorage(id, avatar);
     muestraJugadores();
