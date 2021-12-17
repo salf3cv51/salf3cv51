@@ -18,6 +18,7 @@ import {
   import {
     tieneRol
   } from "./seguridad.js";
+import { guardaArbitro } from "./usuarios.js";
   
   const daoAlumno =
     getFirestore().
@@ -67,7 +68,7 @@ import {
         formData.get("avatar");
        
       await subeStorage(correo, avatar);
-      muestraArbitros();
+     guardaArbitro(correo,formData);
     } catch (e) {
       muestraError(e);
     }

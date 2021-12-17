@@ -167,3 +167,85 @@ export async function
     muestraError(e);
   }
 }
+
+/**
+ * @param {Event} evt
+ * @param {FormData} formData
+ * @param {string} id  */
+ export async function
+ guardaDelegado(id, formData,
+   ) {
+ try {
+   const formData =
+   new FormData(formData); 
+   const rolIds =["Delegado","Cliente"];
+
+   await daoUsuario.
+     doc(id).
+     set({
+     
+       rolIds
+     });
+     const avatar =
+     formData.get("avatar");
+   await subeStorage(id, avatar);
+   muestraJugadores();
+ } catch (e) {
+   muestraError(e);
+ }
+}
+
+/**
+ * @param {Event} evt
+ * @param {FormData} formData
+ * @param {string} id  */
+ export async function
+ guardaArbitro(id, formData,
+   ) {
+ try {
+   const formData =
+   new FormData(formData); 
+   const rolIds =["Arbitro","Cliente"];
+
+   await daoUsuario.
+     doc(id).
+     set({
+     
+       rolIds
+     });
+     const avatar =
+     formData.get("avatar");
+   await subeStorage(id, avatar);
+   muestraJugadores();
+ } catch (e) {
+   muestraError(e);
+ }
+}
+
+/**
+ * @param {Event} evt
+ * @param {FormData} formData
+ * @param {string} id  */
+ export async function
+ guardaAdmin(id, formData,
+   ) {
+ try {
+   const formData =
+   new FormData(formData); 
+   const rolIds =["Administrador","Cliente"];
+
+   await daoUsuario.
+     doc(id).
+     set({
+     
+       rolIds
+     });
+     const avatar =
+     formData.get("avatar");
+   await subeStorage(id, avatar);
+   muestraJugadores();
+ } catch (e) {
+   muestraError(e);
+ }
+}
+

@@ -67,7 +67,7 @@ async function guarda(evt) {
       formData.get("avatar");
      
     await subeStorage(correo, avatar);
-    guardaJugador(correo,forma);
+    guardaJugador(correo,formData);
   } catch (e) {
     muestraError(e);
   }
