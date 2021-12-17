@@ -10,7 +10,7 @@ import {
     subeStorage,eliminaStorage
   } from "../lib/storage.js";
   import {
-    urlStorage,eliminaStorage
+    urlStorage
   } from "../lib/storage.js";
   import {
     muestraAlumnos, muestraAvisos, muestraSanciones, muestraUsuarios
