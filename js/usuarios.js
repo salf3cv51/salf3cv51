@@ -8,6 +8,8 @@ import {
   cod, getForánea, muestraError
 } from "../lib/util.js";
 import {
+  muestraArbitros,
+  muestraDelegados,
   muestraUsuarios
 } from "./navegacion.js";
 
@@ -189,7 +191,7 @@ export async function
      const avatar =
      formData.get("avatar");
    await subeStorage(id, avatar);
-   muestraJugadores();
+   muestraDelegados();
  } catch (e) {
    muestraError(e);
  }
@@ -216,7 +218,7 @@ export async function
      const avatar =
      formData.get("avatar");
    await subeStorage(id, avatar);
-   muestraJugadores();
+   muestraArbitross();
  } catch (e) {
    muestraError(e);
  }
