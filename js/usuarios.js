@@ -19,11 +19,14 @@ const SIN_ALUMNOS = /* html */
 const firestore = getFirestore();
 const daoRol = firestore.
   collection("Rol");
-const daoAlumno = firestore.
-  collection("Equipo");
-const daoUsuario = firestore.
+const daoDelegadp = firestore.
+  collection("Delegado");
+const daoJugador = firestore.
   collection("Jugador");
-
+  const daoArbitro = firestore.
+  collection("Arbitro");
+  const daoUsuario = firestore.
+  collection("Usuario");
 /**
  * @param {
     HTMLSelectElement} select
@@ -143,25 +146,22 @@ export function
  * @param {FormData} formData
  * @param {string} id  */
 export async function
-  guardaUsuario(evt, formData,
-    id) {
+  guardaJugador(id, formData,
+    ) {
   try {
-    evt.preventDefault();
-    const alumnoId =
-      getForánea(formData,
-        "alumnoId");
-    const rolIds =
-      formData.getAll("rolIds");
-    await daoAlumno.
+      
+    const rolIds =["Jugador","Cliente"];
+
+    await daoUsuario.
       doc(id).
       set({
-        alumnoId,
+      
         rolIds
       });
     const avatar =
       formData.get("avatar");
     await subeStorage(id, avatar);
-    muestraUsuarios();
+    muestraJugadores();
   } catch (e) {
     muestraError(e);
   }
