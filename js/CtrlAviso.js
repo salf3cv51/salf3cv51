@@ -60,7 +60,7 @@ import {
                     Aviso} */
         const data = doc.data();   
         console.log(id);
-        img.src = await urlStorage(data.id);
+        img.src = await urlStorage(data.titulo);
         
         forma.fecha.value = data.fecha|| "";
         forma.titulo.value = data.titulo|| "";
@@ -103,7 +103,7 @@ import {
         set(modelo);
         const avatar =
       formData.get("avatar");
-      await subeStorage(id, avatar);
+      await subeStorage(titulo, avatar);
       muestraUsuarios();
     } catch (e) {
       muestraError(e);
