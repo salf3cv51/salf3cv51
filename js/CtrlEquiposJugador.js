@@ -33,7 +33,7 @@ import {
       usuario */
   async function protege(usuario) {
     if (tieneRol(usuario,
-      ["Administrador"])) {
+      ["Jugador"])) {
       consulta();
     }
   }
