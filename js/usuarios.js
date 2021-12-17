@@ -151,8 +151,7 @@ export async function
   guardaJugador(id, formData,
     ) {
   try {
-    const formData =
-    new FormData(formData); 
+    
     const rolIds =["Jugador","Cliente"];
 
     await daoUsuario.
@@ -178,8 +177,7 @@ export async function
  guardaDelegado(id, formData,
    ) {
  try {
-   const formData =
-   new FormData(formData); 
+  
    const rolIds =["Delegado","Cliente"];
 
    await daoUsuario.
@@ -205,8 +203,7 @@ export async function
  guardaArbitro(id, formData,
    ) {
  try {
-   const formData =
-   new FormData(formData); 
+   
    const rolIds =["Arbitro","Cliente"];
 
    await daoUsuario.
@@ -232,8 +229,7 @@ export async function
  guardaAdmin(id, formData,
    ) {
  try {
-   const formData =
-   new FormData(formData); 
+   
    const rolIds =["Administrador","Cliente"];
 
    await daoUsuario.
