@@ -104,7 +104,7 @@ import {
         const avatar =
       formData.get("avatar");
       await subeStorage(titulo, avatar);
-      muestraUsuarios();
+      muestraAvisos();
     } catch (e) {
       muestraError(e);
     }
@@ -117,7 +117,7 @@ import {
         await daoAlumno.
           doc(id).
           delete();
-        muestraSanciones();
+        muestraAvisos();
       }
     } catch (e) {
       muestraError(e);
