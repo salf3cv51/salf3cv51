@@ -65,7 +65,7 @@ import {
                     add(modelo);
         const avatar =
         formData.get("avatar");
-       console.log(id);
+       
       await subeStorage(id, avatar);
       muestraAvisos();
     } catch (e) {
