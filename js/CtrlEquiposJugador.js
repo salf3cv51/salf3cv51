@@ -95,6 +95,7 @@ import {
       `<li>       
             <span
                 class="texto">
+                
               ${equipo}
               
             </span>
