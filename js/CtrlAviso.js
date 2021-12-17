@@ -117,6 +117,8 @@ import {
         await daoAlumno.
           doc(id).
           delete();
+          const titulo=params.get("titulo");
+          await eliminaStorage(titulo);
         muestraAvisos();
       }
     } catch (e) {
