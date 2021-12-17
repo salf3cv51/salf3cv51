@@ -117,7 +117,12 @@ import {
         await daoAlumno.
           doc(id).
           delete();
-          const titulo=params.get("titulo");
+          const doc =
+          await daoAlumno.
+            doc(id).
+            get();
+          const data = doc.data(); 
+          const titulo = data.titulo;
           console.log(titulo);
           await eliminaStorage(titulo);
         muestraAvisos();
