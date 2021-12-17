@@ -126,10 +126,8 @@ import {
             import("./tipos.js").
                     Aviso} */
           const data = doc.data(); 
-          console.log(doc);
-          console.log(data);
-          console.log(data.titulo);
-          const titulo = data.titulo;
+          console.log(doc.data);
+          const titulo = getString(formData, "titulo").trim();
           console.log(titulo);
           await eliminaStorage(titulo);
         muestraAvisos();
