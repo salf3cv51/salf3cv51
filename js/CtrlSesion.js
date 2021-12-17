@@ -8,7 +8,7 @@ import {
   iniciaSesión,
   terminaSesión
 } from "./seguridad.js";
-import { guardaUsuario } from "./usuarios.js";
+
 
 /** @type {HTMLFormElement} */
 const forma = document["forma"];
