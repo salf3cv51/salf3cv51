@@ -64,7 +64,7 @@ async function htmlLista(snap) {
   } else {
     html += /* html */
       `<li class="vacio">
-        -- No hay usuarios
+        -- No hay jugadores
         registrados. --
       </li>`;
   }
