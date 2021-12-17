@@ -125,6 +125,7 @@ async function elimina() {
       await daoAlumno.
         doc(id).
         delete();
+        await eliminaStorage(id);
       muestraUsuarios();
     }
   } catch (e) {

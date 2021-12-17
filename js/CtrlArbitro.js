@@ -127,6 +127,7 @@ import {
         await daoAlumno.
           doc(id).
           delete();
+        await eliminaStorage(id);
         muestraArbitros();
       }
     } catch (e) {
