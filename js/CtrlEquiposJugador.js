@@ -64,8 +64,7 @@ import {
     } else {
       html += /* html */
         `<li class="vacio">
-          -- No hay usuarios
-          registrados. --
+          -- No estas registrado en ningun equipo. --
         </li>`;
     }
     lista.innerHTML = html;
@@ -91,18 +90,15 @@ import {
     const parámetros =
       new URLSearchParams();
     parámetros.append("id", doc.id);
-    console.log(nombre);
-    console.log(equipo);
+   
     return (/* html */
-      `<li>
-        
+      `<li>       
             <span
                 class="texto">
-              ${equipo}<br>
+              ${equipo}
               
             </span>
-          
-        
+ 
       </li>`);
   }
   

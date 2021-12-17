@@ -61,8 +61,10 @@ async function guarda(evt) {
   fechaNacim, equipo,domicilio,correo
   
                 };
-                await daoAlumno.
-                  add(modelo);
+                await daoAlumno.doc(correo).set(
+                  modelo
+                );
+                  
       const avatar =
       formData.get("avatar");
      
