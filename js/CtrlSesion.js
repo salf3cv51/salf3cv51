@@ -8,6 +8,7 @@ import {
   iniciaSesión,
   terminaSesión
 } from "./seguridad.js";
+import { guardaUsuario } from "./usuarios.js";
 
 /** @type {HTMLFormElement} */
 const forma = document["forma"];
@@ -47,6 +48,7 @@ async function
       usuario.displayName || "";
     avatar.src =
       usuario.photoURL || "";
+      
     forma.terminarSesión.
       addEventListener(
         "click", terminaSesión);
