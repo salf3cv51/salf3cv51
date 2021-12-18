@@ -10,8 +10,7 @@ import {
 import {
   muestraArbitros,
   muestraDelegados,
-  muestraJugadores,
-  
+  muestraJugadores
 } from "./navegacion.js";
 
 const SIN_ALUMNOS = /* html */
