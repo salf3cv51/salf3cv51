@@ -10,7 +10,8 @@ import {
 import {
   muestraArbitros,
   muestraDelegados,
-  muestraUsuarios
+  muestraJugadores,
+  
 } from "./navegacion.js";
 
 const SIN_ALUMNOS = /* html */
@@ -163,7 +164,7 @@ export async function
       const avatar =
       formData.get("avatar");
     await subeStorage(id, avatar);
-    muestraUsuarios();
+    muestraJugadores();
   } catch (e) {
     muestraError(e);
   }
