@@ -49,7 +49,7 @@ export function
         select.innerHTML = html;
       },
       e => {
-        muestraError(e);
+        muestraError(e); 
         selectAlumnos(
           select, valor);
       }
