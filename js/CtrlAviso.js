@@ -13,7 +13,7 @@ import {
     urlStorage
   } from "../lib/storage.js";
   import {
-    muestraAlumnos, muestraAvisos, muestraSanciones, muestraUsuarios
+    muestraAvisos, muestraSanciones, muestraUsuarios
   } from "./navegacion.js";
   import {
     tieneRol
