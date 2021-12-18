@@ -12,7 +12,7 @@ import {
   } from "../lib/storage.js";
   
   import {
-    muestraDelegados, muestraUsuarios
+    muestraDelegados
   } from "./navegacion.js";
   
   import {
