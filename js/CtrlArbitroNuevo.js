@@ -12,7 +12,7 @@ import {
   } from "../lib/storage.js";
   
   import {
-    muestraAlumnos, muestraArbitros, muestraDelegados, muestraUsuarios
+    muestraArbitros, muestraDelegados, muestraUsuarios
   } from "./navegacion.js";
   
   import {
@@ -70,6 +70,7 @@ import { guardaArbitro } from "./usuarios.js";
        
       await subeStorage(correo, avatar);
      guardaArbitro(correo,formData);
+     muestraArbitros();
     } catch (e) {
       muestraError(e);
     }

@@ -13,7 +13,7 @@ import {
     urlStorage
   } from "../lib/storage.js";
   import {
-    muestraAlumnos, muestraDelegados, muestraUsuarios
+    muestraDelegados, muestraUsuarios
   } from "./navegacion.js";
   import {
     tieneRol
@@ -84,7 +84,7 @@ import {
       }
     } catch (e) {
       muestraError(e);
-      muestraUsuarios();
+      muestraDelegados();
     }
   }
   
