@@ -13,7 +13,7 @@ import {
   urlStorage
 } from "../lib/storage.js";
 import {
-  muestraAlumnos, muestraUsuarios
+  muestraJugadores
 } from "./navegacion.js";
 import {
   tieneRol
@@ -83,7 +83,7 @@ async function busca() {
     }
   } catch (e) {
     muestraError(e);
-    muestraUsuarios();
+    muestraJugadores();
   }
 }
 
@@ -115,7 +115,7 @@ async function guarda(evt) {
       const avatar =
     formData.get("avatar");
     await subeStorage(id, avatar);
-    muestraUsuarios();
+    muestraJugadores();
   } catch (e) {
     muestraError(e);
   }
@@ -131,7 +131,7 @@ async function elimina() {
         await daoUsuario.
         doc(id).delete();
         await eliminaStorage(id);
-      muestraUsuarios();
+      muestraJugadores();
     }
   } catch (e) {
     muestraError(e);

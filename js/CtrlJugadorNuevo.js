@@ -12,7 +12,7 @@ import {
 } from "../lib/storage.js";
 
 import {
-  muestraAlumnos, muestraUsuarios
+  muestraJugadores
 } from "./navegacion.js";
 
 import {
@@ -70,6 +70,7 @@ async function guarda(evt) {
      
     await subeStorage(correo, avatar);
     guardaJugador(correo,formData);
+    muestraJugadores();
   } catch (e) {
     muestraError(e);
   }

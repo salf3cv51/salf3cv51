@@ -1,12 +1,12 @@
 export function
-  muestraAlumnos() {
+  muestraEquipos() {
   location.href =
-    "alumnos.html";
+    "equipos.html";
 }
 
 export function
-  muestraUsuarios() {
-  location.href = "usuarios.html";
+  muestraJugadores() {
+  location.href = "jugadores.html";
 }
 export function
   muestraSanciones() {
