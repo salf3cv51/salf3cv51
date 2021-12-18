@@ -105,7 +105,7 @@ async function elimina() {
       await daoEquipo.
         doc(id).
         delete();
-      muestraAlumnos();
+      muestraEquipos();
     }
   } catch (e) {
     muestraError(e);
