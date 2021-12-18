@@ -13,7 +13,7 @@ import {
     tieneRol
   } from "./seguridad.js";
   
-  const daoAlumno =
+  const daoSancion =
     getFirestore().
       collection("Sancion");
   const params =
@@ -41,7 +41,7 @@ import {
   async function busca() {
     try {
       const doc =
-        await daoAlumno.
+        await daoSancion.
           doc(id).
           get();
       if (doc.exists) {
@@ -91,7 +91,7 @@ import {
         fecha,tipo,nombre,motivo,arbitro
         
       };
-      await daoAlumno.
+      await daoSancion.
         doc(id).
         set(modelo);
       muestraSanciones();
@@ -104,7 +104,7 @@ import {
     try {
       if (confirm("Confirmar la " +
         "eliminación")) {
-        await daoAlumno.
+        await daoSancion.
           doc(id).
           delete();
         muestraSanciones();

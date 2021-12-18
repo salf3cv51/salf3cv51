@@ -13,7 +13,7 @@ import {
     tieneRol
   } from "./seguridad.js";
   
-  const daoAlumno =
+  const daoSancion =
     getFirestore().
       collection("Sancion");
   /** @type {HTMLFormElement} */
@@ -55,7 +55,7 @@ import {
           };
         
       
-      await daoAlumno.
+      await daoSancion.
         add(modelo);
       muestraSanciones();
     } catch (e) {

@@ -19,7 +19,7 @@ import {
     tieneRol
   } from "./seguridad.js";
   
-  const daoAlumno =
+  const daoAviso =
     getFirestore().
       collection("Aviso");
   const params =
@@ -49,7 +49,7 @@ import {
   async function busca() {
     try {
       const doc =
-        await daoAlumno.
+        await daoAviso.
           doc(id).
           get();
           
@@ -98,7 +98,7 @@ import {
 
         fecha,titulo
       };
-      await daoAlumno.
+      await daoAviso.
         doc(id).
         set(modelo);
         const avatar =
@@ -114,11 +114,11 @@ import {
     try {
       if (confirm("Confirmar la " +
         "eliminación")) {
-        await daoAlumno.
+        await daoAviso.
           doc(id).
           delete();
           const doc =
-          await daoAlumno.
+          await daoAviso.
             doc(id).
             get();
              /**

@@ -19,7 +19,7 @@ import {
     tieneRol
   } from "./seguridad.js";
   
-  const daoAlumno =
+  const daoAviso =
     getFirestore().
       collection("Aviso");
   /** @type {HTMLFormElement} */
@@ -61,7 +61,7 @@ import {
    
     fecha,titulo
                   };
-                  await daoAlumno.
+                  await daoAviso.
                     add(modelo);
         const avatar =
         formData.get("avatar");

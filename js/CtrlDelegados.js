@@ -20,7 +20,7 @@ import {
   const firestore = getFirestore();
   const daoRol = firestore.
     collection("Rol");
-  const daoAlumno = firestore.
+  const daoDelegado = firestore.
     collection("Equipo");
   const daoUsuario = firestore.
     collection("Delegado");

@@ -7,29 +7,18 @@ import {
   muestraError
 } from "../lib/util.js";
 import {
-  subeStorage,eliminaStorage
-} from "../lib/storage.js";
-import {
-  urlStorage
-} from "../lib/storage.js";
-import {
-  muestraAlumnos, muestraUsuarios
+  muestraAlumnos
 } from "./navegacion.js";
 import {
   tieneRol
 } from "./seguridad.js";
 
-const daoAlumno =
+const daoEquipo =
   getFirestore().
-    collection("Jugador");
-    const daoUsuario =
-  getFirestore().
-    collection("Usuario");
+    collection("Equipo");
 const params =
   new URL(location.href).
     searchParams;
-    const img = document.
-  querySelector("img");
 const id = params.get("id");
 /** @type {HTMLFormElement} */
 const forma = document["forma"];
@@ -52,25 +41,18 @@ async function protege(usuario) {
 async function busca() {
   try {
     const doc =
-      await daoAlumno.
+      await daoEquipo.
         doc(id).
         get();
     if (doc.exists) {
       /**
        * @type {
           import("./tipos.js").
-                  Jugador} */
+                  Alumno} */
       const data = doc.data();
-      const formData =
-      new FormData(forma);
-      const correo =  getString(formData, "correo").trim();
-      img.src = await urlStorage(data.correo);
-      forma.nombre.value = data.nombre|| "";
-      forma.fechaNacim.value = data.fechaNacim|| "";
-      forma.equipo.value = data.equipo || "";
-      forma.domicilio.value = data.domicilio || "";
-      forma.correo.value = data.correo || "";
-      forma.cue.value = "Jugador: "+data.nombre || "";
+      forma.nombre.value = data.nombre || "";
+      forma.categoria.value = data.categoria|| "";
+      forma.delegado.value = data.delegado || "";
       
       forma.addEventListener(
         "submit", guarda);
@@ -83,7 +65,7 @@ async function busca() {
     }
   } catch (e) {
     muestraError(e);
-    muestraUsuarios();
+    muestraAlumnos();
   }
 }
 
@@ -95,27 +77,22 @@ async function guarda(evt) {
       new FormData(forma);
     
     const nombre = getString(formData, "nombre").trim();
-    const fechaNacim = getString(formData, "fechaNacim").trim();
-    const equipo = getString(formData, "equipo").trim();
-    const domicilio = getString(formData, "domicilio").trim();
-    const correo =  getString(formData, "correo").trim();
+    const categoria = getString(formData, "categoria").trim();
+    const delegado = getString(formData, "delegado").trim();
+    
     /**
      * @type {
         import("./tipos.js").
                 Alumno} */
     const modelo = {
       nombre,
-      fechaNacim,
-      equipo,
-      domicilio,correo
+      categoria,
+      delegado
     };
-    await daoAlumno.
+    await daoEquipo.
       doc(id).
       set(modelo);
-      const avatar =
-    formData.get("avatar");
-    await subeStorage(id, avatar);
-    muestraUsuarios();
+    muestraAlumnos();
   } catch (e) {
     muestraError(e);
   }
@@ -125,19 +102,13 @@ async function elimina() {
   try {
     if (confirm("Confirmar la " +
       "eliminación")) {
-      await daoAlumno.
+      await daoEquipo.
         doc(id).
         delete();
-        await daoUsuario.
-        doc(id).delete();
-        await eliminaStorage(id);
-      muestraUsuarios();
+      muestraAlumnos();
     }
   } catch (e) {
     muestraError(e);
   }
 }
-
-
-
 

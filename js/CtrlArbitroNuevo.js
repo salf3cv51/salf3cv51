@@ -20,7 +20,7 @@ import {
   } from "./seguridad.js";
 import { guardaArbitro } from "./usuarios.js";
   
-  const daoAlumno =
+  const daoArbitro =
     getFirestore().
       collection("Arbitro");
   /** @type {HTMLFormElement} */
@@ -62,7 +62,7 @@ import { guardaArbitro } from "./usuarios.js";
     rfc, edad,domicilio,correo,telefono
     
                   };
-                  await daoAlumno.doc(correo).set(
+                  await daoArbitro.doc(correo).set(
                     modelo
                   );
         const avatar =

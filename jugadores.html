@@ -5,7 +5,7 @@
   <meta name="viewport"
     content="width=device-width,
        initial-scale=1.0">
-  <title>Equipos</title>
+  <title>Jugadores</title>
   <script
     src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js">
     </script>
@@ -14,6 +14,10 @@
     </script>
   <script
     src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js">
+    </script>
+  <!-- Agrega el manejo de storage. -->
+  <script
+    src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js">
     </script>
   <script src="js/init.js">
   </script>
@@ -33,10 +37,9 @@
   <section class="caja">
   <mi-nav></mi-nav>
   <header>
-    <h1>Equipos</h1>
+    <h1>Jugadores</h1>
     <div class="herramientas">
-      <a
-        href="alumnoNuevo.html">
+      <a href="jugadorNuevo.html">
         Agregar…</a>
     </div>
   </header>
@@ -49,8 +52,7 @@
   <mi-footer></mi-footer>
 </section>
   <script type="module"
-    src="js/CtrlAlumnos.js">
+    src="js/CtrlJugadores.js">
     </script>
 </body>
 </html>
-

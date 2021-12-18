@@ -6,16 +6,23 @@ import {
   getString,
   muestraError
 } from "../lib/util.js";
+
 import {
-  muestraAlumnos
+  subeStorage
+} from "../lib/storage.js";
+
+import {
+  muestraAlumnos, muestraUsuarios
 } from "./navegacion.js";
+
 import {
   tieneRol
 } from "./seguridad.js";
+import { guardaJugador } from "./usuarios.js";
 
-const daoAlumno =
+const daoJugador =
   getFirestore().
-    collection("Equipo");
+    collection("Jugador");
 /** @type {HTMLFormElement} */
 const forma = document["forma"];
 getAuth().onAuthStateChanged(
@@ -39,22 +46,30 @@ async function guarda(evt) {
     const formData =
     new FormData(forma); 
     const nombre = getString(formData, "nombre").trim();
-    const categoria = getString(formData, "categoria").trim();
-    const delegado = getString(formData, "delegado").trim();
+    const fechaNacim = getString(formData, "fechaNacim").trim();
+    const equipo = getString(formData, "equipo").trim();
+    const domicilio = getString(formData, "domicilio").trim();
+    const correo =  getString(formData, "correo").trim();
+    
     /**
      * @type {
         import("./tipos.js").
                 Alumno} */
-    const modelo = {
-      
-      nombre,
-      categoria,
-      delegado
-      
-    };
-    await daoAlumno.
-      add(modelo);
-    muestraAlumnos();
+   
+ const modelo = {
+  nombre,
+  fechaNacim, equipo,domicilio,correo
+  
+                };
+                await daoJugador.doc(correo).set(
+                  modelo
+                );
+                  
+      const avatar =
+      formData.get("avatar");
+     
+    await subeStorage(correo, avatar);
+    guardaJugador(correo,formData);
   } catch (e) {
     muestraError(e);
   }

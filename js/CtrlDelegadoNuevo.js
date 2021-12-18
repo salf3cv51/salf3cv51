@@ -20,7 +20,7 @@ import {
   } from "./seguridad.js";
 import { guardaDelegado } from "./usuarios.js";
   
-  const daoAlumno =
+  const daoDelegado =
     getFirestore().
       collection("Delegado");
   /** @type {HTMLFormElement} */
@@ -62,7 +62,7 @@ import { guardaDelegado } from "./usuarios.js";
     rfc, edad,domicilio,correo,telefono
     
                   };
-                  await daoAlumno.doc(correo).set(
+                  await daoDelegado.doc(correo).set(
                     modelo
                   );
         const avatar =

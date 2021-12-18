@@ -20,7 +20,7 @@ const lista = document.
 const firestore = getFirestore();
 const daoRol = firestore.
   collection("Rol");
-const daoAlumno = firestore.
+const daoJugador = firestore.
   collection("Equipo");
 const daoUsuario = firestore.
   collection("Jugador");
@@ -98,7 +98,7 @@ async function htmlFila(doc) {
     `<li>
       <a class="fila conImagen"
           href=
-    "usuario.html?${parámetros}">
+    "jugador.html?${parámetros}">
         <span class="marco">
           <img src="${img}"
             alt="Falta el Avatar">
@@ -148,7 +148,7 @@ async function
  buscaDomicilio(id) {
  if (id) {
    const doc =
-     await daoAlumno.
+     await daoJugador.
        doc(id).
        get();
    if (doc.exists) {

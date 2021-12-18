@@ -14,7 +14,7 @@ import {
   /** @type {HTMLUListElement} */
   const lista = document.
     querySelector("#lista");
-  const daoAlumno =
+  const daoSancion =
     getFirestore().
       collection("Sancion");
   
@@ -33,7 +33,7 @@ import {
   }
   
   function consulta() {
-    daoAlumno.
+    daoSancion.
       orderBy("nombre")
       .onSnapshot(
         htmlLista, errConsulta);
