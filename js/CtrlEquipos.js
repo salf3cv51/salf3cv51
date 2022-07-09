@@ -82,8 +82,12 @@ function htmlFila(doc) {
       <a class="fila" href=
   "equipo.html?${parámetros}">
         <strong class="primario">
-          ${numeroPedido} ${fecha} ${concepto} ${total}
+         Pedido # ${numeroPedido} Fecha: ${fecha} 
         </strong>
+         <span class="secundario">
+             Concepto: ${concepto} <br>
+             Total: $ ${total}}
+            </span>
       </a>
      
     </li>`);
