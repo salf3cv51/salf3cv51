@@ -16,7 +16,7 @@ const lista = document.
   querySelector("#lista");
 const daoEquipo =
   getFirestore().
-    collection("Equipo");
+    collection("Pedido");
 
 getAuth().
   onAuthStateChanged(
@@ -34,7 +34,7 @@ async function protege(usuario) {
 
 function consulta() {
   daoEquipo.
-    orderBy("nombre")
+    orderBy("numeroPedido")
     .onSnapshot(
       htmlLista, errConsulta);
 }
@@ -51,7 +51,7 @@ function htmlLista(snap) {
   } else {
     html += /* html */
       `<li class="vacio">
-        -- No hay equipos
+        -- No hay pedidos
         registrados. --
       </li>`;
   }
@@ -67,10 +67,10 @@ function htmlFila(doc) {
    * @type {import("./tipos.js").
                   Alumno} */
   const data = doc.data();
-  const categoria = cod(data.categoria);
-  const delegado = cod(data.delegado);
-  const nombre = cod(data.nombre);
- 
+  const numeroPedido = cod(data.numeroPedido);
+  const fecha = cod(data.fecha);
+  const concepto = cod(data.concepto);
+ const total = cod(data.total);
   
   var espacio="[   -   ]";
   
@@ -82,7 +82,7 @@ function htmlFila(doc) {
       <a class="fila" href=
   "equipo.html?${parámetros}">
         <strong class="primario">
-          ${nombre} ${categoria} ${delegado}
+          ${numeroPedido} ${fecha} ${concepto} ${total}
         </strong>
       </a>
      
