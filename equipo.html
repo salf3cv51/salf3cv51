@@ -45,40 +45,33 @@
     </header>
     <mi-progreso>
     </mi-progreso>
-    <p>
+   <p>
       <label>
-        Nombre
-        <input name="nombre"
-          type="text" required>
+        Productos
+        <select name="productos" >
+                <option>Motor LGX</option>
+
+        </select>
+        <label>
+          Cantidad</label>
+        <span style="size: 40% ; ">
+          <input type="number" required> <input type="button" value="Agregar" class="boton button">
+        </span>
       </label>
-    </p>
+    </p> 
     <p>
       <label>
-        Categoria
-        <input name="categoria"
-          type="text" required>
-      </label>
-    </p>
-    <p>
-      <label>
-        Delegado
-        <input name="delegado"
-          type="text" required>
-      </label>
-    </p>
-    <p>
-      <label>
-        Escudo (Opcional)
-        <input name="escudo"
-          type="file"
-          accept=".png,.jpg,.gif,.jpeg">
+        Resumen
+        
+        <textarea name="resumen" id="resumen" cols="5" rows="20"></textarea>
+        
       </label>
     </p>
     <mi-footer></mi-footer>
   </form>
 </section>
   <script type="module"
-    src="js/CtrlEquipo.js">
+    src="js/CtrlJugadorNuevo.js">
     </script>
 </body>
 </html>
