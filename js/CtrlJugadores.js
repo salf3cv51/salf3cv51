@@ -23,7 +23,7 @@ const daoRol = firestore.
 const daoJugador = firestore.
   collection("Equipo");
 const daoUsuario = firestore.
-  collection("Jugador");
+  collection("Producto");
 
 getAuth().onAuthStateChanged(
   protege, muestraError);
@@ -82,10 +82,9 @@ async function htmlFila(doc) {
   const data = doc.data();
   
   const img = cod(
-    await urlStorage(data.correo));
-    const equipo = cod(data.equipo);
-    const domicilio = cod(data.domicilio);
-    const nombre = cod(data.nombre);
+    const concepto = cod(data.concepto);
+    const estado = cod(data.estado);
+    const precio = cod(data.precio);
       
   const roles =
     await buscaRoles(data.rolIds);
@@ -103,12 +102,12 @@ async function htmlFila(doc) {
         <span class="texto">
           <strong
               class="primario">
-            ${nombre}
+            ${concepto}
           </strong>
           <span
               class="secundario">
-            ${equipo}<br>
-            ${domicilio}
+            ${estado}<br>
+            ${precio}
           </span>
         </span>
       </a>
