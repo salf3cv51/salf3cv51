@@ -15,7 +15,7 @@ import {
 
 const daoEquipo =
   getFirestore().
-    collection("Equipo");
+    collection("Producto");
 const params =
   new URL(location.href).
     searchParams;
@@ -50,9 +50,8 @@ async function busca() {
           import("./tipos.js").
                   Alumno} */
       const data = doc.data();
-      forma.nombre.value = data.nombre || "";
-      forma.categoria.value = data.categoria|| "";
-      forma.delegado.value = data.delegado || "";
+      forma.resumen.value = data.concepto || "";
+      
       
       forma.addEventListener(
         "submit", guarda);
@@ -76,18 +75,16 @@ async function guarda(evt) {
     const formData =
       new FormData(forma);
     
-    const nombre = getString(formData, "nombre").trim();
-    const categoria = getString(formData, "categoria").trim();
-    const delegado = getString(formData, "delegado").trim();
+    
+    const concepto = getString(formData, "resumen");
     
     /**
      * @type {
         import("./tipos.js").
                 Alumno} */
     const modelo = {
-      nombre,
-      categoria,
-      delegado
+      resumen
+      
     };
     await daoEquipo.
       doc(id).
