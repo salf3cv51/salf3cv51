@@ -76,12 +76,12 @@ async function agregaProducto(evt) {
      * @type {
         import("./tipos.js").
                 Alumno} */
-    const modelo = {
-      numeroPedido,fecha,concepto,total
+   
       
-    };
+      
+    
     alert("EL EVENTO DEL BOTON FUNCIONA")
-    forma.resumen.value+=modelo
+    forma.resumen.value+=numeroPedido,fecha,concepto,total
   } catch (e) {
     muestraError(e);
   }
