@@ -50,7 +50,7 @@ async function guarda(evt) {
                 Alumno} */
     const modelo = {
       
-      numeroPedido,fecha,concepto,total
+     cantidad,producto
       
     };
     await daoEquipo.
