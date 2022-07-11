@@ -15,7 +15,7 @@ import {
 
 const daoEquipo =
   getFirestore().
-    collection("Producto");
+    collection("Pedido");
 const params =
   new URL(location.href).
     searchParams;
