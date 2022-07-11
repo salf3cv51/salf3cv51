@@ -38,6 +38,17 @@
       </div>
     </header>   
     <p>
+   <label>
+          Fecha
+        <span style="size: 40% ; ">
+          <input type="date" id="fecha" name="fecha">
+          </label>
+           <label>
+         Numero de Pedido
+          <input type="number" id="numeroPedido" name="numeroPedido">
+        </label>
+        </span>
+    </p>    
   <p>
       <label>
         Productos
@@ -48,7 +59,7 @@
         <label>
           Cantidad</label>
         <span style="size: 40% ; ">
-          <input type="number" required> <input type="button" value="Agregar" class="boton button">
+          <input type="number"> <input type="button" value="Agregar" class="boton button">
         </span>
       </label>
     </p> 
@@ -60,11 +71,19 @@
         
       </label>
     </p>
+    
+    <label>
+         Total
+        <span style="size: 40% ; ">
+          <input type="number" id="total" name="total">
+          </label>
+        </span>
+    </p>
     <mi-footer></mi-footer>
   </form>
 </section>
   <script type="module"
-    src="js/CtrlJugadorNuevo.js">
+    src="js/CtrlEquipoNuevo.js">
     </script>
 </body>
 </html>
