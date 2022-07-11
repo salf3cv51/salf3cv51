@@ -45,7 +45,19 @@
     </header>
     <mi-progreso>
     </mi-progreso>
-   <p>
+    <p>
+   <label>
+          Fecha
+        <span style="size: 40% ; ">
+          <input type="date" id="fecha" name="fecha">
+          </label>
+           <label>
+         Numero de Pedido
+          <input type="number" id="numeroPedido" name="numeroPedido">
+        </label>
+        </span>
+    </p>    
+  <p>
       <label>
         Productos
         <select name="productos" >
@@ -55,7 +67,7 @@
         <label>
           Cantidad</label>
         <span style="size: 40% ; ">
-          <input name="cantidad" id="cantidad" type="number" required> <input id="agregar" name"agregar" type="button" value="Agregar" class="boton button">
+          <input type="number"> <input type="button" value="Agregar" class="boton button">
         </span>
       </label>
     </p> 
@@ -66,6 +78,14 @@
         <textarea name="resumen" id="resumen" cols="5" rows="20"></textarea>
         
       </label>
+    </p>
+    
+    <label>
+         Total
+        <span style="size: 40% ; ">
+          <input type="number" id="total" name="total">
+          </label>
+        </span>
     </p>
     <mi-footer></mi-footer>
   </form>
