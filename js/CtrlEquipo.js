@@ -122,7 +122,7 @@ async function agregaProducto(evt) {
       numeroPedido,fecha,concepto,total
       
     };
-    
+    alert("EL EVENTO DEL BOTON FUNCIONA")
     forma.resumen.value+=modelo
   } catch (e) {
     muestraError(e);
