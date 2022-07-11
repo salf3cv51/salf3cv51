@@ -7,13 +7,13 @@ import {
   muestraError
 } from "../lib/util.js";
 import {
-  muestraEquipos
+ muestraPedidos
 } from "./navegacion.js";
 import {
   tieneRol
 } from "./seguridad.js";
 
-const daoEquipo =
+const datoPedido =
   getFirestore().
     collection("Pedido");
 const params =
@@ -41,7 +41,7 @@ async function protege(usuario) {
 async function busca() {
   try {
     const doc =
-      await daoEquipo.
+      await datoPedido.
         doc(id).
         get();
     if (doc.exists) {
@@ -67,7 +67,7 @@ async function busca() {
     }
   } catch (e) {
     muestraError(e);
-    muestraEquipos();
+    muestraPedidos();
   }
 }
 
@@ -84,18 +84,15 @@ async function guarda(evt) {
     const total = getString(formData, "total").trim();
     const numeroPedido = getString(formData, "numeroPedido").trim();
      const fecha = getString(formData, "fecha").trim();
-    /**
-     * @type {
-        import("./tipos.js").
-                Alumno} */
+   
     const modelo = {
       numeroPedido,fecha,concepto,total
       
     };
-    await daoEquipo.
+    await datoPedido.
       doc(id).
       set(modelo);
-    muestraEquipos();
+   muestraPedidos()
   } catch (e) {
     muestraError(e);
   }
@@ -106,10 +103,10 @@ async function elimina() {
   try {
     if (confirm("Confirmar la " +
       "eliminación")) {
-      await daoEquipo.
+      await datoPedido.
         doc(id).
         delete();
-      muestraEquipos();
+      muestraPedidos();
     }
   } catch (e) {
     muestraError(e);
