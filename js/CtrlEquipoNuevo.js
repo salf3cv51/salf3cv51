@@ -29,6 +29,8 @@ async function protege(usuario) {
     ["Administrador"])) {
     forma.addEventListener(
       "submit", guarda);
+      forma.btn_agregaProducto.addEventListener(
+      "click", agregaProducto);
   }
 }
 
@@ -54,6 +56,32 @@ async function guarda(evt) {
     await daoEquipo.
       add(modelo);
     muestraEquipos();
+  } catch (e) {
+    muestraError(e);
+  }
+}
+
+async function agregaProducto(evt) {
+  try {
+    evt.preventDefault();
+    const formData =
+      new FormData(forma);
+    
+     const producto= getString(formData, "producto");
+    const cantidad = getString(formData, "cantidad").trim();
+    const estado = getString(formData, "estado").trim();
+    const precio = getString(formData, "precio").trim();
+    
+    /**
+     * @type {
+        import("./tipos.js").
+                Alumno} */
+    const modelo = {
+      numeroPedido,fecha,concepto,total
+      
+    };
+    alert("EL EVENTO DEL BOTON FUNCIONA")
+    forma.resumen.value+=modelo
   } catch (e) {
     muestraError(e);
   }
