@@ -60,9 +60,7 @@ async function busca() {
       forma.eliminar.
         addEventListener(
           "click", elimina);
-      forma.btn_agregaProducto.
-        addEventListener(
-          "click", agregaProducto);
+   
     } else {
       throw new Error(
         "No se encontró.");
@@ -98,32 +96,6 @@ async function guarda(evt) {
       doc(id).
       set(modelo);
     muestraEquipos();
-  } catch (e) {
-    muestraError(e);
-  }
-}
-
-async function agregaProducto(evt) {
-  try {
-    evt.preventDefault();
-    const formData =
-      new FormData(forma);
-    
-     const producto= getString(formData, "producto");
-    const cantidad = getString(formData, "cantidad").trim();
-    const estado = getString(formData, "estado").trim();
-    const precio = getString(formData, "precio").trim();
-    
-    /**
-     * @type {
-        import("./tipos.js").
-                Alumno} */
-    const modelo = {
-      cantidad,producto,estado,precio
-      
-    };
-    alert("EL EVENTO DEL BOTON FUNCIONA")
-    forma.resumen.value+=modelo
   } catch (e) {
     muestraError(e);
   }
