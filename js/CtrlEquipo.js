@@ -51,7 +51,9 @@ async function busca() {
                   Alumno} */
       const data = doc.data();
       forma.resumen.value = data.concepto || "";
-      
+      forma.fecha.value = data.fecha || "";
+      forma.numeroPedido.value = data.numeroPedido|| "";
+      forma.total.value = data.total || "";
       
       forma.addEventListener(
         "submit", guarda);
