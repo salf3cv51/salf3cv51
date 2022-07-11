@@ -80,7 +80,7 @@ function htmlFila(doc) {
   return ( /* html */
     `<li>
       <a class="fila" href=
-  "equipo.html?${parámetros}">
+  "pedido.html?${parámetros}">
         <strong class="primario">
          Pedido # ${numeroPedido} Fecha: ${fecha} 
         </strong>
