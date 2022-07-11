@@ -7,13 +7,13 @@ import {
   muestraError
 } from "../lib/util.js";
 import {
-  muestraEquipos
+  muestraPedidos
 } from "./navegacion.js";
 import {
   tieneRol
 } from "./seguridad.js";
 
-const daoEquipo =
+const datoPedido =
   getFirestore().
     collection("Pedido");
 /** @type {HTMLFormElement} */
@@ -21,9 +21,7 @@ const forma = document["forma"];
 getAuth().onAuthStateChanged(
   protege, muestraError);
 
-/** @param {import(
-    "../lib/tiposFire.js").User}
-    usuario */
+
 async function protege(usuario) {
   if (tieneRol(usuario,
     ["Administrador"])) {
@@ -42,18 +40,15 @@ async function guarda(evt) {
     const total = getString(formData, "total").trim();
     const numeroPedido = getString(formData, "numeroPedido").trim();
      const fecha = getString(formData, "fecha").trim();
-    /**
-     * @type {
-        import("./tipos.js").
-                Alumno} */
+
     const modelo = {
       
      numeroPedido,fecha,concepto,total
       
     };
-    await daoEquipo.
+    await datoPedido.
       add(modelo);
-    muestraEquipos();
+    muestraPedidos();
   } catch (e) {
     muestraError(e);
   }
