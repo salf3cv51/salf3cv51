@@ -1,11 +1,6 @@
 /*  Inicializa Firebase con la
  * configuración del proyecto.
- * Revisa la configuración en tu
- * servidor de Firebase y cópiala
- * aquí sustituyendo los
- * asteriscos. Los campos deben
- * quedar igual que en tu
- * servidor. */
+. */
 // @ts-ignore
 firebase.initializeApp({
   apiKey: "AIzaSyAMRNTrDrN-o1noAaS5dOOZIiW7LE2D-NY",
