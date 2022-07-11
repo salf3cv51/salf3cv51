@@ -86,7 +86,7 @@ function htmlFila(doc) {
         </strong>
          <span class="secundario">
              Concepto: ${concepto} <br>
-             Total: $ ${total}}
+             Total: $ ${total}
             </span>
       </a>
      
