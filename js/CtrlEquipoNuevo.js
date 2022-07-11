@@ -50,7 +50,7 @@ async function guarda(evt) {
                 Alumno} */
     const modelo = {
       
-     cantidad,producto
+     numeroPedido,fecha,concepto,total
       
     };
     await daoEquipo.
@@ -81,7 +81,7 @@ async function agregaProducto(evt) {
       
     
     alert("EL EVENTO DEL BOTON FUNCIONA")
-    forma.resumen.value+=numeroPedido,fecha,concepto,total
+    forma.resumen.value+=producto,cantidad,estado,precio
   } catch (e) {
     muestraError(e);
   }
