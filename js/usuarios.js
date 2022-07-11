@@ -7,11 +7,6 @@ import {
 import {
   cod, getForánea, muestraError
 } from "../lib/util.js";
-import {
-  muestraArbitros,
-  muestraDelegados,
-  muestraJugadores
-} from "./navegacion.js";
 
 const SIN_ALUMNOS = /* html */
   `<option value="">
@@ -21,12 +16,6 @@ const SIN_ALUMNOS = /* html */
 const firestore = getFirestore();
 const daoRol = firestore.
   collection("Rol");
-const daoDelegadp = firestore.
-  collection("Delegado");
-const daoJugador = firestore.
-  collection("Jugador");
-  const daoArbitro = firestore.
-  collection("Arbitro");
   const daoUsuario = firestore.
   collection("Usuario");
 /**
@@ -142,84 +131,3 @@ export function
       </label>
     </li>`);
 }
-
-/**
- * @param {Event} evt
- * @param {FormData} formData
- * @param {string} id  */
-export async function
-  guardaJugador(id, formData,
-    ) {
-  try {
-    
-    const rolIds =["Jugador","Cliente"];
-
-    await daoUsuario.
-      doc(id).
-      set({
-      
-        rolIds
-      });
-      const avatar =
-      formData.get("avatar");
-    await subeStorage(id, avatar);
-    muestraJugadores();
-  } catch (e) {
-    muestraError(e);
-  }
-}
-
-/**
- * @param {Event} evt
- * @param {FormData} formData
- * @param {string} id  */
- export async function
- guardaDelegado(id, formData,
-   ) {
- try {
-  
-   const rolIds =["Delegado","Cliente"];
-
-   await daoUsuario.
-     doc(id).
-     set({
-     
-       rolIds
-     });
-     const avatar =
-     formData.get("avatar");
-   await subeStorage(id, avatar);
-   muestraDelegados();
- } catch (e) {
-   muestraError(e);
- }
-}
-
-/**
- * @param {Event} evt
- * @param {FormData} formData
- * @param {string} id  */
- export async function
- guardaArbitro(id, formData,
-   ) {
- try {
-   
-   const rolIds =["Arbitro","Cliente"];
-
-   await daoUsuario.
-     doc(id).
-     set({
-     
-       rolIds
-     });
-     const avatar =
-     formData.get("avatar");
-   await subeStorage(id, avatar);
-   muestraArbitros();
- } catch (e) {
-   muestraError(e);
- }
-}
-
-
-
