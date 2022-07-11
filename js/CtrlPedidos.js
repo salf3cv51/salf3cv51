@@ -33,7 +33,7 @@ async function protege(usuario) {
 }
 
 function consulta() {
-  daoEquipo.
+  datoPedido.
     orderBy("fecha")
     .onSnapshot(
       htmlLista, errConsulta);
