@@ -38,7 +38,7 @@ async function guarda(evt) {
     evt.preventDefault();
     const formData =
     new FormData(forma); 
-    const concepto = getString(formData, "concepto");
+    const concepto = getString(formData, "resumen");
     const total = getString(formData, "total").trim();
     const numeroPedido = getString(formData, "numeroPedido").trim();
      const fecha = getString(formData, "fecha").trim();
