@@ -21,7 +21,7 @@ const forma = document["forma"];
 getAuth().onAuthStateChanged(
   protege, muestraError);
 
-
+/** verifica que el usuario sea administrador y agrega el evento al boton y le liga la funcion guarda */
 async function protege(usuario) {
   if (tieneRol(usuario,
     ["Administrador"])) {
@@ -30,12 +30,15 @@ async function protege(usuario) {
   }
 }
 
-/** @param {Event} evt */
+/**funcion que guarda los datos en la base de datos */
 async function guarda(evt) {
   try {
     evt.preventDefault();
+    /**Se liga el formulario con los datos registrados*/
     const formData =
     new FormData(forma); 
+    
+   /** se obtiene cada uno de los strings de los campos ligandolos con su id en el documento html*/
     const concepto = getString(formData, "resumen");
     const total = getString(formData, "total").trim();
     const numeroPedido = getString(formData, "numeroPedido").trim();
@@ -46,6 +49,7 @@ async function guarda(evt) {
      numeroPedido,fecha,concepto,total
       
     };
+    /** se agregan los datos del pedido a la bd */
     await datoPedido.
       add(modelo);
     muestraPedidos();
