@@ -15,7 +15,7 @@ import {
 
 const daoEquipo =
   getFirestore().
-    collection("Producto");
+    collection("Pedido");
 /** @type {HTMLFormElement} */
 const forma = document["forma"];
 getAuth().onAuthStateChanged(
