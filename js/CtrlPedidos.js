@@ -22,9 +22,7 @@ getAuth().
   onAuthStateChanged(
     protege, muestraError);
 
-/** @param {import(
-    "../lib/tiposFire.js").User}
-    usuario */
+/**verifica que el usuario sea administrador y realiza la consulta */
 async function protege(usuario) {
   if (tieneRol(usuario,
     ["Administrador"])) {
@@ -32,6 +30,7 @@ async function protege(usuario) {
   }
 }
 
+/**funcion que hace la consulta de los datos y los ordena en este caso por fecha, si se logra muestra la lista, y si no muestra errConsulta */
 function consulta() {
   datoPedido.
     orderBy("fecha")
@@ -40,9 +39,7 @@ function consulta() {
 }
 
 /**
- * @param {import(
-    "../lib/tiposFire.js").
-    QuerySnapshot} snap */
+verifica si hay pedidos registrados en la base de datos y si no es asi muestra un mensaje  */
 function htmlLista(snap) {
   let html = "";
   if (snap.size > 0) {
@@ -59,13 +56,10 @@ function htmlLista(snap) {
 }
 
 /**
- * @param {import(
-    "../lib/tiposFire.js").
-    DocumentSnapshot} doc */
+ *funcion que muestra los registros de la bd ordenandolo en filas */
 function htmlFila(doc) {
-  /**
-   * @type {import("./tipos.js").
-                  Alumno} */
+  /**Crea constantes y a cada uno le asocia su valor registrado en la base de datos
+  */
   const data = doc.data();
   const numeroPedido = cod(data.numeroPedido);
   const fecha = cod(data.fecha);
@@ -73,10 +67,11 @@ function htmlFila(doc) {
  const total = cod(data.total);
   
   var espacio="[   -   ]";
-  
+  /*agrega los parametros al id del documento asociado*/
   const parámetros =
     new URLSearchParams();
   parámetros.append("id", doc.id);
+  /** muestra los datos en filas con los datos obtenidos anteriormente */
   return ( /* html */
     `<li>
       <a class="fila" href=
@@ -93,7 +88,7 @@ function htmlFila(doc) {
     </li>`);
 }
 
-/** @param {Error} e */
+/** si hay erro en la consulta muestra el error */
 function errConsulta(e) {
   muestraError(e);
   consulta();
