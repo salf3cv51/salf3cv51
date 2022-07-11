@@ -119,7 +119,7 @@ async function agregaProducto(evt) {
         import("./tipos.js").
                 Alumno} */
     const modelo = {
-      numeroPedido,fecha,concepto,total
+      cantidad,producto,estado,precio
       
     };
     alert("EL EVENTO DEL BOTON FUNCIONA")
