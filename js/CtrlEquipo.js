@@ -60,7 +60,7 @@ async function busca() {
       forma.eliminar.
         addEventListener(
           "click", elimina);
-      forma.btn_agregarProducto.
+      forma.btn_agregaProducto.
         addEventListener(
           "click", agregaProducto);
     } else {
