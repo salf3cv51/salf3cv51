@@ -6,23 +6,56 @@
     content="width=device-width,
        initial-scale=1.0">
   <title>Pedido</title>
+  <!--
+    Carga el núcleo de Firebase
+    JS SDK
+  -->
+
   <script
     src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js">
     </script>
+  <!--
+    Agrega el manejo de
+    autenticación.
+  -->
+
   <script
     src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js">
     </script>
+   <!--
+    Agrega el manejo de bases de
+    datos.
+  -->
+
   <script
     src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js">
     </script>
+  <!--
+    Configura la app usando la
+    información del sitio de
+    Firebase.
+  -->
+
   <script src="js/init.js">
   </script>
+  <!--
+    Carga los datos del pie de pagina
+  -->
+
   <script type="module"
     src="cmp/mi-footer.js">
   </script>
+  <!--
+    Carga la barra de progreso
+  -->
+
   <script type="module"
   src="cmp/mi-progreso.js"> 
   </script>
+  <!--
+    Asocia la hoja de estilos al documento
+  -->
+
   <link rel="stylesheet"
     href="css/estilos.css"> 
 
@@ -46,6 +79,9 @@
     <mi-progreso>
     </mi-progreso>
     <p>
+      <!--
+   Formulario de los datos del pedido
+  -->
    <label>
           Fecha
         <span style="size: 40% ; ">
@@ -73,6 +109,10 @@
     <mi-footer></mi-footer>
   </form>
 </section>
+  <!--
+   Asocia el archivo js para el control del pedido
+  -->
+
   <script type="module"
     src="js/CtrlPedido.js">
     </script>
