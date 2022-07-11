@@ -14,7 +14,7 @@ import {
 /** @type {HTMLUListElement} */
 const lista = document.
   querySelector("#lista");
-const daoEquipo =
+const datoPedido =
   getFirestore().
     collection("Pedido");
 
@@ -34,7 +34,7 @@ async function protege(usuario) {
 
 function consulta() {
   daoEquipo.
-    orderBy("numeroPedido")
+    orderBy("fecha")
     .onSnapshot(
       htmlLista, errConsulta);
 }
