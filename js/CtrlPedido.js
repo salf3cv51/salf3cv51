@@ -25,7 +25,7 @@ const forma = document["forma"];
 
 getAuth().onAuthStateChanged(
   protege, muestraError);
-
+ 
 /** @param {import(
     "../lib/tiposFire.js").User}
     usuario */
