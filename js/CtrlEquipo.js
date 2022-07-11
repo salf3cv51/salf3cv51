@@ -78,14 +78,17 @@ async function guarda(evt) {
       new FormData(forma);
     
     
+
     const concepto = getString(formData, "resumen");
-    
+    const total = getString(formData, "total").trim();
+    const numeroPedido = getString(formData, "numeroPedido").trim();
+     const fecha = getString(formData, "fecha").trim();
     /**
      * @type {
         import("./tipos.js").
                 Alumno} */
     const modelo = {
-      resumen
+      numeroPedido,fecha,concepto,total
       
     };
     await daoEquipo.
