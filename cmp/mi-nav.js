@@ -48,7 +48,7 @@ class MiNav extends HTMLElement {
           if (roles.has("Jugador")) {
             html += /* html */
            `<li>
-                <a href="equipos.html">Tareas</a>
+                <a href="tareas_alumno.html">Tareas</a>
           </li>`;
           }
           if (roles.has("Delegado")) {
