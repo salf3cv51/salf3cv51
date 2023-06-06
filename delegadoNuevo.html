@@ -5,7 +5,7 @@
   <meta name="viewport"
     content="width=device-width,
        initial-scale=1.0">
-  <title>Nuevo Delegado</title>
+  <title>Agregar Material</title>
   <script
     src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js">
     </script>
@@ -37,7 +37,7 @@
   <form name="forma">
     <mi-nav></mi-nav>
     <header>
-      <h1>Delegado Nuevo</h1>
+      <h1>Agregar Material</h1>
       <div class="herramientas">
         <a href="delegados.html">
           Cancelar</a>
@@ -46,56 +46,35 @@
         </button>
       </div>
     </header>
-    <p>
+      <p>
       <label>
-        Fotografia
-        <input name="avatar"
+        Adjuntar Archivo
+        <input name="archivo"
           type="file"
-          accept=".png,.jpg,.jpeg,.gif">
+          accept=".png,.jpg,.jpeg,.gif,.pdf,.doc,.docx,.xls,.ppt">
       </label>
     </p>
     <p>
         <label>
-          RFC
+          Titulo
           <input name="rfc"
             type="text" required>
         </label>
       </p>
     <p>
       <label>
-        Nombre
+        Descripcion
         <input name="nombre"
           type="text" required>
       </label>
     </p>
     <p>
         <label>
-          Edad
+          Autor
           <input name="edad"
             type="number" required>
         </label>
       </p>
-    <p>
-      <label>
-        Domicilio
-        <input name="domicilio"
-          type="text" required>
-      </label>
-    </p>
-    <p>
-        <label>
-          Telefono de Contacto
-          <input name="tel"
-            type="text" required>
-        </label>
-      </p>
-    <p>
-      <label>
-        Correo Electronico (Gmail)
-        <input name="correo"
-          type="email" required>
-      </label>
-    </p>   
     <mi-footer></mi-footer>
   </form>
 </section>
