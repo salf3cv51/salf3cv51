@@ -86,7 +86,10 @@ class MiNav extends HTMLElement {
           </li>
               <li>
                 <a href="avisos.html">Avisos</a>
-              </li>`;
+              </li>
+           <li>
+            <a href="registro_alumno.html">Sanciones</a>
+          </li>`;
               
           }
           this.ul.innerHTML += html;
