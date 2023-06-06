@@ -21,7 +21,7 @@ import {
   const daoRol = firestore.
     collection("Rol");
   const daoDelegado = firestore.
-    collection("Delegado);
+    collection("Delegado");
   const daoUsuario = firestore.
     collection("Delegado");
   
