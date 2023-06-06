@@ -72,12 +72,7 @@ class MiNav extends HTMLElement {
               `<li>
                 <a href="equipos.html">Tareas</a>
               </li>
-              <li>
-                <a href="jugadores.html">Trabajos</a>
-              </li>
-              <li>
-              <a href="delegados.html">Material</a>
-            </li>
+       
               <li>
                 <a href="avisos.html">Avisos</a>
               </li>
