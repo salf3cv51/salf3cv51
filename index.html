@@ -5,7 +5,7 @@
   <meta name="viewport"
     content="width=device-width,
        initial-scale=1.0">
-  <title>Pedidos</title>
+  <title>Inicio</title>
   <!--
     Carga el núcleo de Firebase
     JS SDK
@@ -20,12 +20,16 @@
   <script
     src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js">
     </script>
-    <!--
+  <!--
     Agrega el manejo de bases de
     datos.
   -->
   <script
     src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js">
+    </script>
+
+    <script
+    src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js">
     </script>
   <!--
     Configura la app usando la
@@ -34,52 +38,73 @@
   -->
   <script src="js/init.js">
   </script>
-    <!--
-    Carga los datos del pie de pagina
-  -->
+  <script type="module"
+    src="cmp/mi-nav.js">
+    </script>
   <script type="module"
     src="cmp/mi-footer.js">
     </script>
-  <!--
-    Carga la barra de progreso
-  -->
   <script type="module"
     src="cmp/mi-progreso.js">
     </script>
-  <!--
-    Asocia la hoja de estilos al documento
-  -->
   <link rel="stylesheet"
     href="css/estilos.css">
 </head>
 <body>
   <section class="caja">
-  <header>
-    <h1>Pedidos</h1>
-    <div class="herramientas">
-      <a
-        href="pedidoNuevo.html">
-        Agregar…</a>
-    </div>
-  </header>
-    <!--
- muestra los pedidos registrados en la base de datos en forma de filas
-  -->
-
-  <ul id="lista" class="lista">
-    <li>
-      <mi-progreso>
-      </mi-progreso>
-    </li>
-  </ul>
-  <mi-footer></mi-footer>
+ <form name="forma">
+    <mi-nav></mi-nav>
+    <header>
+      <h1>Inicio</h1>
+      
+        <button class="boton button"
+          type="button"
+          name="terminarSesión">
+          Cerrar Sesión
+        </button> 
+      </header>
+        <div style="align-content: center; text-align: center;">
+    <figure>
+      <img id="avatar" src=""
+        alt="Avatar">
+    </figure>
+    <p>
+      <label>
+        Email
+        <output name="email">
+          <mi-progreso>
+          </mi-progreso>
+        </output>
+      </label>
+    </p>
+    <p>
+      <label>
+        Nombre
+        <output name="nombre">
+          <mi-progreso>
+          </mi-progreso>
+        </output>
+      </label>
+      
+    </p>
+  </div>
+  
+  <h1 style="text-align: center; color: red;">AVISOS</h1>
+  <div class="herramientas2">
+  
+      <ul id="lista" class="lista">
+        <li style="color: red;">
+          <mi-progreso>
+          </mi-progreso>
+        </li>
+      </ul>
+ 
+  </div>
+    <mi-footer></mi-footer>
+  </form>
 </section>
-  <!--
-   Asocia el archivo js para el control de los pedidos
-  -->
- <script type="module"
-    src="js/CtrlPedidos.js">
-    </script>
+  <script type="module" src="js/CtrlSesion.js"></script>
+  <script type="module" src="js/CtrlAvisosSesion.js"> </script>
+
 </body>
 </html>
-

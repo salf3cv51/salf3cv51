@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width,
+       initial-scale=1.0">
+  <title>
+    Equipo Nuevo
+  </title>
+  <script
+    src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script
+    src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+  <script
+    src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+  <script src="js/init.js">
+  </script>
+  <script type="module"
+    src="cmp/mi-nav.js">
+    </script>
+  <script type="module"
+    src="cmp/mi-footer.js">
+    </script>
+  <link rel="stylesheet"
+    href="css/estilos.css">
+</head>
+<body>
+  <section class="caja">
+  <form name="forma">
+    <mi-nav></mi-nav>
+    <header>
+      <h1>Equipo Nuevo</h1>
+      <div class="herramientas">
+        <a
+          href="equipos.html">
+          Cancelar</a>
+        <button type="submit">
+          Guardar
+        </button>
+      </div>
+    </header>   
+    <p>
+      <label>
+        Nombre
+        <input name="nombre"
+          type="text" required>
+      </label>
+    </p>
+    <p>
+      <label>
+        Categoria
+        <input name="categoria"
+          type="text" required>
+      </label>
+    </p>
+    <p>
+      <label>
+        Delegado
+        <input name="delegado"
+          type="text" required>
+      </label>
+    </p>
+    <p>
+      <label>
+        Escudo (Opcional)
+        <input name="escudo"
+          type="file"
+          accept=".png,.jpg,.gif,.jpeg">
+      </label>
+    </p>
+    <mi-footer></mi-footer>
+  </form>
+</section>
+  <script type="module"
+    src="js/CtrlEquipoNuevo.js">
+    </script>
+</body>
+</html>
+

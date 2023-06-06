@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width,
+       initial-scale=1.0">
+  <title>Nuevo Delegado</title>
+  <script
+    src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js">
+    </script>
+  <script
+    src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js">
+    </script>
+  <script
+    src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js">
+    </script>
+  <script
+    src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js">
+    </script>
+  <script src="js/init.js">
+  </script>
+  <script type="module"
+    src="cmp/mi-nav.js">
+    </script>
+  <script type="module"
+    src="cmp/mi-footer.js">
+    </script>
+  <script type="module"
+    src="cmp/mi-progreso.js">
+    </script>
+  <link rel="stylesheet"
+    href="css/estilos.css">
+</head>
+<body>
+  <section class="caja">
+  <form name="forma">
+    <mi-nav></mi-nav>
+    <header>
+      <h1>Delegado Nuevo</h1>
+      <div class="herramientas">
+        <a href="delegados.html">
+          Cancelar</a>
+        <button type="submit">
+          Guardar
+        </button>
+      </div>
+    </header>
+    <p>
+      <label>
+        Fotografia
+        <input name="avatar"
+          type="file"
+          accept=".png,.jpg,.jpeg,.gif">
+      </label>
+    </p>
+    <p>
+        <label>
+          RFC
+          <input name="rfc"
+            type="text" required>
+        </label>
+      </p>
+    <p>
+      <label>
+        Nombre
+        <input name="nombre"
+          type="text" required>
+      </label>
+    </p>
+    <p>
+        <label>
+          Edad
+          <input name="edad"
+            type="number" required>
+        </label>
+      </p>
+    <p>
+      <label>
+        Domicilio
+        <input name="domicilio"
+          type="text" required>
+      </label>
+    </p>
+    <p>
+        <label>
+          Telefono de Contacto
+          <input name="tel"
+            type="text" required>
+        </label>
+      </p>
+    <p>
+      <label>
+        Correo Electronico (Gmail)
+        <input name="correo"
+          type="email" required>
+      </label>
+    </p>   
+    <mi-footer></mi-footer>
+  </form>
+</section>
+  <script type="module"
+    src="js/CtrlDelegadoNuevo.js">
+    </script>
+</body>
+</html>

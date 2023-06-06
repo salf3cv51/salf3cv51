@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width,
+       initial-scale=1.0">
+  <title>Aviso</title>
+  <script
+    src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js">
+    </script>
+  <script
+    src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js">
+    </script>
+  <script
+    src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js">
+    </script>
+  <script
+    src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js">
+    </script>
+  <script src="js/init.js">
+  </script>
+  <script type="module"
+    src="cmp/mi-nav.js">
+    </script>
+  <script type="module"
+    src="cmp/mi-footer.js">
+    </script>
+  <script type="module"
+    src="cmp/mi-progreso.js">
+    </script>
+  <link rel="stylesheet"
+    href="css/estilos.css">
+</head>
+<body>
+  <section class="caja">
+  <form name="forma">
+    <mi-nav></mi-nav>
+    <header>
+      <h1>Eliminar Aviso</h1>
+      <div class="herramientas">
+        <a href="avisos.html">
+          Regresar</a>
+        <button name="eliminar"
+          type="button">
+          Eliminar
+        </button>
+    </header>
+    <figure id="figure">
+        <img id="avatar" src=""
+           alt="Falta el Avatar">
+       </figure>
+    <p>
+        <label>
+          Titulo:
+          <input name="titulo"
+            type="text" readonly>
+        </label>
+      </p>
+    <p>
+      <label>
+        Fecha:
+        <input name="fecha"
+          type="date" readonly>
+      </label>
+    </p>
+    <mi-footer></mi-footer>
+  </form>
+</section>
+  <script type="module"
+    src="js/CtrlAviso.js">
+    </script>
+</body>
+</html>
