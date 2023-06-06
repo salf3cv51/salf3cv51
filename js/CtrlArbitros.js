@@ -39,7 +39,7 @@ import {
   }
   
   function consulta() {
-    daoUsuario.onSnapshot(
+    daoArbitro.onSnapshot(
       htmlLista, errConsulta);
   }
   
